@@ -1,5 +1,6 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
@@ -135,7 +136,8 @@ const vehicles = [
   }
 ]
 
-export default function Vehicles() {
+// Componente principal de vehículos
+function VehiclesContent() {
   const searchParams = useSearchParams()
   const typeFromUrl = searchParams.get('type')
   const [selectedType, setSelectedType] = useState<string | null>(typeFromUrl)
@@ -268,6 +270,19 @@ export default function Vehicles() {
         </div>
       </section>
     </div>
+  )
+}
+
+// Página principal envuelta en Suspense
+export default function Vehicles() {
+  return (
+    <Suspense fallback={
+      <div className="container mx-auto px-4 py-8 text-center">
+        <p className="text-gray-600">Cargando vehículos...</p>
+      </div>
+    }>
+      <VehiclesContent />
+    </Suspense>
   )
 }
 
