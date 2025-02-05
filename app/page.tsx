@@ -1,101 +1,126 @@
-import Image from "next/image";
+import { ImageSlider } from './components/image-slider'
+import { Requirements } from './components/requirements'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <div>
+      <ImageSlider />
+      <div className="py-16 text-center">
+        <h1 className="text-4xl font-bold mb-8 text-orange-500">Bienvenidos a Jepuru Car</h1>
+        <p className="text-xl mb-8 max-w-2xl mx-auto">
+          Disfruta de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
+          Ya sea para negocios o placer, tenemos el vehículo perfecto para ti.
+        </p>
+        <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
+          <Link 
+            href="/vehicles" 
+            className="bg-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            Ver Vehículos Disponibles
+          </Link>
+          <Link 
+            href="/contact" 
+            className="bg-white text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-50 transition duration-300"
           >
-            Read our docs
-          </a>
+            Contactar Ahora
+          </Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+      </div>
+      <section className="bg-orange-50 py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 text-orange-500 
+                         transform transition-all duration-300 hover:scale-105">
+            Tipos de Vehículos Disponibles
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            <Link 
+              href="/vehicles?type=COMPACT" 
+              className="group relative overflow-hidden rounded-xl shadow-lg 
+                        transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 to-orange-600/10
+                            group-hover:from-orange-500/85 group-hover:to-orange-600/85 
+                            transition-all duration-500 ease-in-out z-10" />
+              <Image
+                src="/images/vehiculos/hb20.jpeg"
+                alt="Autos"
+                width={400}
+                height={300}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
+                <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
+                             group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-lg">
+                  Autos
+                </h3>
+                <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
+                            transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
+                  i10, HB20, Etios, Gol, Soluto y más
+                </p>
+              </div>
+            </Link>
+
+            <Link 
+              href="/vehicles?type=SUV" 
+              className="group relative overflow-hidden rounded-xl shadow-lg 
+                        transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 to-orange-600/10
+                            group-hover:from-orange-500/85 group-hover:to-orange-600/85 
+                            transition-all duration-500 ease-in-out z-10" />
+              <Image
+                src="/images/vehiculos/coolray.jpeg"
+                alt="Camionetas"
+                width={400}
+                height={300}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
+                <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
+                             group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-lg">
+                  Camionetas
+                </h3>
+                <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
+                            transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
+                  HB20X, Tivoli, Coolray, JIM 4X4 y más
+                </p>
+              </div>
+            </Link>
+
+            <Link 
+              href="/vehicles?type=VAN" 
+              className="group relative overflow-hidden rounded-xl shadow-lg 
+                        transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-orange-500/10 to-orange-600/10
+                            group-hover:from-orange-500/85 group-hover:to-orange-600/85 
+                            transition-all duration-500 ease-in-out z-10" />
+              <Image
+                src="/images/vehiculos/h1.jpeg"
+                alt="Van"
+                width={400}
+                height={300}
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
+                <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
+                             group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-lg">
+                  Van
+                </h3>
+                <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
+                            transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
+                  Hyundai H1
+                </p>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+      <Requirements />
     </div>
-  );
+  )
 }
+
