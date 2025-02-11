@@ -26,11 +26,6 @@ export default function Services() {
                          animate-[fadeIn_1s_ease-out] drop-shadow-lg">
             Nuestros Servicios
           </h1>
-          <p className="text-2xl max-w-3xl mx-auto opacity-90 leading-relaxed
-                        animate-[slideUp_1s_ease-out] drop-shadow">
-            Ofrecemos una amplia gama de vehículos, en perfecto estado, 
-            <span className="block mt-2">desde autos compactos hasta Van para pasajeros.</span>
-          </p>
         </div>
 
         {/* Decoración inferior */}

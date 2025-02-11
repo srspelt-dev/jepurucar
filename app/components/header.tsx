@@ -34,7 +34,7 @@ export function Header() {
           {/* Menú desktop */}
           <ul className="hidden md:flex space-x-6">
             <li><Link href="/" className="hover:underline">Inicio</Link></li>
-            <li><Link href="/services" className="hover:underline">Servicio</Link></li>
+            <li><Link href="/services" className="hover:underline">Servicios</Link></li>
             <li><Link href="/vehicles" className="hover:underline">Vehículos</Link></li>
             <li><Link href="/contact" className="hover:underline">Contáctanos</Link></li>
             <li><Link href="/about" className="hover:underline">Sobre Nosotros</Link></li>
@@ -45,10 +45,10 @@ export function Header() {
         {isMenuOpen && (
           <ul className="md:hidden py-4 space-y-4">
             <li><Link href="/" className="block hover:underline">Inicio</Link></li>
-            <li><Link href="/services" className="block hover:underline">Servicio</Link></li>
-            <li><Link href="/about" className="block hover:underline">Sobre Nosotros</Link></li>
+            <li><Link href="/services" className="block hover:underline">Servicios</Link></li>
             <li><Link href="/vehicles" className="block hover:underline">Vehículos</Link></li>
             <li><Link href="/contact" className="block hover:underline">Contáctanos</Link></li>
+            <li><Link href="/about" className="block hover:underline">Sobre Nosotros</Link></li>
           </ul>
         )}
       </nav>
