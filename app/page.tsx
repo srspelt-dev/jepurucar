@@ -8,8 +8,8 @@ export default function Home() {
     <div>
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid md:grid-cols-5 gap-4 items-center">
-          {/* Video local - ocupa 2 columnas */}
-          <div className="md:col-span-2 aspect-[9/16] h-[600px] flex items-center justify-center">
+          {/* Video local - ocupa 2 columnas y se centra en móvil */}
+          <div className="md:col-span-2 aspect-[9/16] h-[400px] md:h-[600px] mx-auto w-full max-w-sm md:max-w-none">
             <VideoHero />
           </div>
 
