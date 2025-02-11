@@ -38,6 +38,14 @@ export function Footer() {
                 </div>
               </div>
             </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.393481526346!2d-57.6309557887817!3d-25.324574077535853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da9c8bfaab85d%3A0x60c34ce4bffc7629!2sJepuru%20Car%20-%20Rent%20a%20Car!5e0!3m2!1ses!2spy!4v1739066163206!5m2!1ses!2spy"
+              className="w-full h-48 rounded-lg mt-auto"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
 
           {/* Sucursal 2 */}
@@ -104,17 +112,47 @@ export function Footer() {
             <div>
               <h3 className="text-xl font-bold mb-4">Síguenos en</h3>
               <div className="flex space-x-4">
-                <a href="#" className="hover:text-orange-200 transition-transform hover:scale-110" 
-                   target="_blank" aria-label="Facebook">
+                <a 
+                  href="https://www.facebook.com/jepurucar" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-200 transition-transform hover:scale-110" 
+                  aria-label="Facebook"
+                >
                   <Facebook className="w-6 h-6" />
                 </a>
-                <a href="#" className="hover:text-orange-200 transition-transform hover:scale-110" 
-                   target="_blank" aria-label="Instagram">
+                <a 
+                  href="https://www.instagram.com/jepurucar" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-200 transition-transform hover:scale-110" 
+                  aria-label="Instagram"
+                >
                   <Instagram className="w-6 h-6" />
                 </a>
-                <a href="#" className="hover:text-orange-200 transition-transform hover:scale-110" 
-                   target="_blank" aria-label="LinkedIn">
+                <a 
+                  href="https://www.linkedin.com/company/jepurucar-rent-a-car" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-200 transition-transform hover:scale-110" 
+                  aria-label="LinkedIn"
+                >
                   <Linkedin className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://www.tiktok.com/@jepururentacar" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-200 transition-transform hover:scale-110" 
+                  aria-label="TikTok"
+                >
+                  <svg 
+                    className="w-6 h-6" 
+                    fill="currentColor" 
+                    viewBox="0 0 448 512"
+                  >
+                    <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                  </svg>
                 </a>
               </div>
             </div>

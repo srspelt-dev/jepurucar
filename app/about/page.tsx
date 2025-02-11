@@ -104,9 +104,7 @@ export default function About() {
             <h2 className="text-2xl font-bold">Nuestra Misión</h2>
           </div>
           <p className="text-gray-600 leading-relaxed">
-            Brindar soluciones de movilidad accesibles y seguras, superando las expectativas 
-            de nuestros clientes a través de un servicio personalizado y una flota de 
-            vehículos moderna y bien mantenida.
+          Proporcionar vehículos de alta calidad que brinden seguridad y confort, mientras mantenemos un enfoque en la satisfacción del cliente.
           </p>
         </div>
 
@@ -131,7 +129,7 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/team/grupal-funcionarios.jpg"
+                src="/images/equipo/equipo1.jpg"
                 alt="Equipo de Funcionarios Jepuru"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -146,7 +144,7 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/team/grupal-lavadero.jpg"
+                src="/images/equipo/lavadero.jpg"
                 alt="Equipo de Lavadero"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"

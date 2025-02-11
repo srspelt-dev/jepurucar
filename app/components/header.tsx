@@ -35,9 +35,9 @@ export function Header() {
           <ul className="hidden md:flex space-x-6">
             <li><Link href="/" className="hover:underline">Inicio</Link></li>
             <li><Link href="/services" className="hover:underline">Servicio</Link></li>
-            <li><Link href="/about" className="hover:underline">Sobre Nosotros</Link></li>
             <li><Link href="/vehicles" className="hover:underline">Vehículos</Link></li>
             <li><Link href="/contact" className="hover:underline">Contáctanos</Link></li>
+            <li><Link href="/about" className="hover:underline">Sobre Nosotros</Link></li>
           </ul>
         </div>
 

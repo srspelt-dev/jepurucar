@@ -1,34 +1,46 @@
-import { ImageSlider } from './components/image-slider'
 import { Requirements } from './components/requirements'
 import Link from 'next/link'
 import Image from 'next/image'
+import { VideoHero } from './components/video-hero'
 
 export default function Home() {
   return (
     <div>
-      <ImageSlider />
-      <div className="py-16 text-center">
-        <h1 className="text-4xl font-bold mb-8 text-orange-500">Bienvenidos a Jepuru Car</h1>
-        <p className="text-xl mb-8 max-w-2xl mx-auto">
-          Disfruta de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
-          Ya sea para negocios o placer, tenemos el vehículo perfecto para ti.
-        </p>
-        <div className="flex flex-col md:flex-row justify-center gap-4 mb-12">
-          <Link 
-            href="/vehicles" 
-            className="bg-orange-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300"
-          >
-            Ver Vehículos Disponibles
-          </Link>
-          <Link 
-            href="/contact" 
-            className="bg-white text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-orange-50 transition duration-300"
-          >
-            Contactar Ahora
-          </Link>
-        </div>
+      <div className="container mx-auto px-4 py-8 md:py-12">
+        <div className="grid md:grid-cols-5 gap-4 items-center">
+          {/* Video local - ocupa 2 columnas */}
+          <div className="md:col-span-2 aspect-[9/16] h-[600px] flex items-center justify-center">
+            <VideoHero />
+          </div>
 
+          {/* Contenido de texto - ocupa 3 columnas */}
+          <div className="md:col-span-3 text-center md:text-left space-y-4 md:pl-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-orange-500">
+              Bienvenidos a Jepuru Car
+            </h1>
+            <p className="text-xl text-gray-700">
+              Disfruta de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
+              Ya sea para negocios o placer, tenemos el vehículo perfecto para ti.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
+              <Link 
+                href="/vehicles" 
+                className="bg-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300"
+              >
+                Ver Vehículos Disponibles
+              </Link>
+              <Link 
+                href="/contact" 
+                className="bg-white text-orange-500 border-2 border-orange-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-50 transition duration-300"
+              >
+                Contactar Ahora
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
+
+      {/* Resto de las secciones */}
       <section className="bg-orange-50 py-16">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-12 text-orange-500 

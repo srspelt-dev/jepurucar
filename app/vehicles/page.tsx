@@ -30,14 +30,14 @@ const vehicles = [
     id: 3, 
     name: 'HB20 Hatchback', 
     type: 'COMPACT', 
-    features: ['5 Pasajeros', 'Manual', 'Bluetooth', 'USB'], 
+    features: ['Versatil', 'Manual', 'Potencia y eficiencia en consumo', 'Admite conexiones Bluetooth, USB'], 
     image: '/images/vehiculos/hb20-hatch.jpeg'
   },
   { 
     id: 4, 
-    name: 'Hyundai HB20S', 
+    name: 'New Hyundai HB20S', 
     type: 'SEDAN', 
-    features: ['5 Pasajeros', 'Automático', 'GPS'], 
+    features: ['Amplia Baulera', 'Gran Rendimiento de combustible', 'Ideal para viajes largos con mucho equipaje'], 
     image: '/images/vehiculos/hb20s.jpeg'
   },
   { 
@@ -50,8 +50,8 @@ const vehicles = [
   { 
     id: 6, 
     name: 'GX3 PRO', 
-    type: 'SEDAN', 
-    features: ['5 Pasajeros', 'Automático', 'Cámara'], 
+    type: 'SUV', 
+    features: ['Diseño elegante', 'Potente y tecnología de vanguardia', 'Ideal para viajes urbanos y sub-urbanos'], 
     image: '/images/vehiculos/gx3.jpeg'
   },
   { 
@@ -84,10 +84,10 @@ const vehicles = [
   },
   { 
     id: 11, 
-    name: 'Hyundai H1', 
+    name: 'Kia Carnival', 
     type: 'VAN', 
     features: ['12 Pasajeros', 'Manual', 'Aire Acondicionado'], 
-    image: '/images/vehiculos/h1.jpeg'
+    image: '/images/vehiculos/carnival.jpeg'
   },
   {
     id: 12,
@@ -95,9 +95,9 @@ const vehicles = [
     brand: 'Hyundai',
     type: 'SUV',
     features: [
-      'Alta tecnología',
-      'Máxima seguridad',
-      'Automático'
+      'SUV de alta tecnología',
+      'Seguridad y confort',
+      'Diseño elegante y moderno'
     ],
     image: '/images/vehiculos/tucson.jpg'
   },
@@ -106,9 +106,9 @@ const vehicles = [
     name: 'Grand i10 hatchback',
     type: 'COMPACT',
     features: [
-      'Consumo equilibrado',
-      'Económico',
-      'Línea básica'
+        'Consumo equilibrado',
+        'Económico',
+        'Línea básica'
     ],
     image: '/images/vehiculos/grand-i10.jpeg'
   },

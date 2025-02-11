@@ -53,7 +53,7 @@ export function Requirements() {
       </div>
       
       {/* Texto adicional */}
-      <p className="text-sm text-gray-600 text-center mt-12 italic">
+      <p className="text-md text-gray-600 text-center mt-12 italic">
         * Sujeto a análisis según el perfil de cada cliente, pudiendo solicitar documentaciones adicionales para el efecto.
       </p>
     </section>

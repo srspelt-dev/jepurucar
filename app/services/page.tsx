@@ -52,10 +52,10 @@ export default function Services() {
                 </div>
               </div>
               <h3 className="text-2xl font-semibold mb-4 group-hover:text-orange-500 transition-colors">
-                Flota Variada
+               Alquiler de Vehículos
               </h3>
               <p className="text-gray-600">
-                Desde autos compactos económicos hasta vans espaciosas para grupos.
+              Ofrecemos una amplia gama de vehiculos, en perfecto estado, desde autos compactos hasta Van para pasajeros.
               </p>
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Services() {
 
 
       {/* Sección de Lavadero */}
-      <section>
+      {/* <section>
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="space-y-4 md:space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-orange-500">Servicio de Lavadero Profesional</h2>
@@ -159,7 +159,7 @@ export default function Services() {
             />
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Reseñas de Google */}
       <GoogleReviews />
