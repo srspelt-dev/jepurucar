@@ -78,7 +78,7 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/equipo/equipo1.jpg"
+                src="/images/Equipo/equipo1.jpg"
                 alt="Equipo de Funcionarios Jepuru"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -93,7 +93,7 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/equipo/lavadero.jpg"
+                src="/images/Equipo/lavadero.jpg"
                 alt="Equipo de Lavadero"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
