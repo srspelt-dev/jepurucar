@@ -20,13 +20,7 @@ export default function Contact() {
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h2 className="text-2xl font-semibold mb-6 text-gray-800">Información de Contacto</h2>
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <span className="text-orange-500 text-xl">📞</span>
-                <div>
-                  <p className="font-medium">Teléfono</p>
-                  <p className="text-gray-600">+595 981 123 456</p>
-                </div>
-              </div>
+              
               <div className="flex items-center space-x-3">
                 <span className="text-orange-500 text-xl">📧</span>
                 <div>
@@ -38,7 +32,8 @@ export default function Contact() {
                 <span className="text-orange-500 text-xl">⏰</span>
                 <div>
                   <p className="font-medium">Horario de Atención</p>
-                  <p className="text-gray-600">Lunes a Sábado: 8:00 - 18:00</p>
+                  <p className="text-gray-600">Lunes a Viernes 9:00 - 17:30</p>
+                  <p className="text-gray-600">Sábados: 9:00 - 13:00</p>
                   <p className="text-gray-600">Domingo: Cerrado</p>
                 </div>
               </div>
