@@ -70,7 +70,7 @@ export default function Home() {
                 </h3>
                 <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
                             transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
-                  i10, HB20, Etios, Gol, Soluto y más
+                  i10,Grand i10, HB20, HB20S, Soluto y más
                 </p>
               </div>
             </Link>
@@ -111,7 +111,7 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/vehiculos/carnival.jpg"
+                src="/images/vehiculos/Carnival.jpg"
                 alt="Van"
                 width={400}
                 height={300}
@@ -124,7 +124,7 @@ export default function Home() {
                 </h3>
                 <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
                             transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
-                  Hyundai H1
+                  Kia Carnival
                 </p>
               </div>
             </Link>

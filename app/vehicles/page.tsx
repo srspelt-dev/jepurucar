@@ -179,7 +179,7 @@ const vehicles = [
       'Automática',
       'Turbo'
     ], 
-    image: '/images/vehiculos/carnival.jpg'
+    image: '/images/vehiculos/Carnival.jpg'
   }
 ]
 
