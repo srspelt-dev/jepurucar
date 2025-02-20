@@ -5,9 +5,8 @@ import { MessageCircle } from 'lucide-react'
 
 const phoneNumbers = [
   '+595961590627',
-  '+595981123456',
-  '+595971234567',
-  '+595991234567'
+  '+595974302500',
+  '+595971951077',
 ]
 
 export function WhatsAppButton() {

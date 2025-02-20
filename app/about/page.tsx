@@ -1,57 +1,6 @@
 import Image from 'next/image'
 import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
 
-const teamMembers = [
-  { 
-    name: 'Mara Benítez', 
-    role: 'CEO', 
-    description: 'Con más de 15 años de experiencia en la industria automotriz',
-    image: '/images/equipo/mara.jpg'
-  },
-  { 
-    name: 'Marcelo González', 
-    role: 'Gerente de Operaciones', 
-    description: 'Especialista en logística y gestión de flotas',
-    image: '/images/equipo/marcelo.jpg'
-  },
-  { 
-    name: 'Maria Santos', 
-    role: 'Atención al Cliente', 
-    description: 'Dedicada a brindar la mejor experiencia a nuestros clientes',
-    image: '/images/equipo/chica1.jpg'
-  },
-  { 
-    name: 'Juan Perez', 
-    role: 'Gerente de Flota', 
-    description: 'Experto en mantenimiento y gestión de vehículos',
-    image: '/images/equipo/chico1.jpg'
-  },
-  { 
-    name: 'Laura Martinez', 
-    role: 'Directora de Marketing', 
-    description: 'Especialista en estrategias digitales y comunicación',
-    image: '/images/equipo/chica2.jpg'
-  },
-  { 
-    name: 'Diego Lopez', 
-    role: 'Supervisor de Mantenimiento', 
-    description: 'Responsable de mantener nuestra flota en óptimas condiciones',
-    image: '/images/equipo/chico2.jpg'
-  },
-  { 
-    name: 'Sofia Ramirez', 
-    role: 'Gerente Financiera', 
-    description: 'Experta en gestión financiera y planificación estratégica',
-    image: '/images/equipo/chica3.jpg'
-  },
-  { 
-    name: 'Pedro Gonzalez', 
-    role: 'Especialista IT', 
-    description: 'Encargado de la infraestructura tecnológica y sistemas',
-    image: '/images/equipo/chico3.jpg'
-  }
-]
-
 export default function About() {
   return (
     <div className="container mx-auto px-4 py-12 space-y-24">
@@ -157,59 +106,45 @@ export default function About() {
         </div>
       </section>
 
-      {/* Hero Section del Equipo */}
-      <section className="relative py-20 bg-gradient-to-r from-orange-500 to-orange-600 -mx-4 px-4">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10"></div>
-        <div className="relative container mx-auto text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">Nuestro Equipo</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
-            Conoce a los profesionales apasionados que trabajan día a día para brindarte la mejor experiencia en alquiler de vehículos en Paraguay.
-          </p>
-        </div>
-      </section>
-
-      {/* Grid del Equipo */}
-      <section className="container mx-auto -mt-20">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {teamMembers.map((member, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
-            >
-              <div className="relative w-full aspect-square mb-6 rounded-xl overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  fill
-                  className="object-cover transform hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white text-sm">{member.description}</p>
-                </div>
-              </div>
-              <div className="text-center">
-                <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                <p className="text-orange-500 font-medium mb-3">{member.role}</p>
-                <div className="flex justify-center space-x-3">
-                  <button className="p-2 hover:bg-orange-50 rounded-full transition-colors">
-                    <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z"/>
-                    </svg>
-                  </button>
-                  <button className="p-2 hover:bg-orange-50 rounded-full transition-colors">
-                    <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12c0-5.523-4.477-10-10-10z"/>
-                    </svg>
-                  </button>
-                  <button className="p-2 hover:bg-orange-50 rounded-full transition-colors">
-                    <svg className="w-5 h-5 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M16.98 0a6.9 6.9 0 0 1 5.08 1.98A6.94 6.94 0 0 1 24 7.02v9.96c0 2.08-.68 3.87-1.98 5.13A7.14 7.14 0 0 1 16.94 24H7.06a7.06 7.06 0 0 1-5.03-1.89A6.96 6.96 0 0 1 0 16.94V7.02C0 2.8 2.8 0 7.02 0h9.96zm.05 2.23H7.06c-1.45 0-2.7.43-3.53 1.25a4.82 4.82 0 0 0-1.3 3.54v9.92c0 1.5.43 2.7 1.3 3.58a5 5 0 0 0 3.53 1.25h9.88a5 5 0 0 0 3.53-1.25 4.73 4.73 0 0 0 1.4-3.54V7.02a5 5 0 0 0-1.3-3.49 4.82 4.82 0 0 0-3.54-1.3zM12 5.76c3.39 0 6.2 2.8 6.2 6.2a6.2 6.2 0 0 1-12.4 0 6.2 6.2 0 0 1 6.2-6.2zm0 2.22a3.99 3.99 0 0 0-3.97 3.97A3.99 3.99 0 0 0 12 15.92a3.99 3.99 0 0 0 3.97-3.97A3.99 3.99 0 0 0 12 7.98z"/>
-                    </svg>
-                  </button>
-                </div>
-              </div>
+     
+   {/* Sección de Experiencias de Influencers */}
+   <section className="py-16 bg-gradient-to-br from-orange-50 to-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-orange-500">
+            Experiencias con Jepuru Car
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Video de Tana */}
+            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7387513574626757894"
+                className="w-full h-full rounded-xl shadow-lg"
+                allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
             </div>
-          ))}
+
+            {/* Video de Marcelo Gabriel */}
+            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7437173755367148855"
+                className="w-full h-full rounded-xl shadow-lg"
+                allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+
+            {/* Video de Miss */}
+            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+              <iframe
+                src="https://www.tiktok.com/embed/v2/7437173755367148855"
+                className="w-full h-full rounded-xl shadow-lg"
+                allowFullScreen
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </section>
 

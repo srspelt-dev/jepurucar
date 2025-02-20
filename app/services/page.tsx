@@ -3,8 +3,6 @@ import { Car, Baby, Globe } from 'lucide-react'
 import { GoogleReviews } from '../components/google-reviews'
 import { BookingForm } from '../components/booking-form'
 
-
-
 export default function Services() {
   return (
     <div className="container mx-auto px-4 py-8 md:py-12 space-y-16 md:space-y-24">
@@ -117,44 +115,7 @@ export default function Services() {
         </div>
       </section>
 
-
-      {/* Sección de Lavadero */}
-      {/* <section>
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="space-y-4 md:space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-orange-500">Servicio de Lavadero Profesional</h2>
-            <p className="text-lg text-gray-600">
-              Nuestro servicio de lavadero cuenta con personal especializado y productos de primera calidad para dejar tu vehículo impecable.
-            </p>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3">
-                <span className="text-orange-500">✓</span>
-                Lavado exterior premium
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-orange-500">✓</span>
-                Limpieza interior profunda
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-orange-500">✓</span>
-                Encerado y pulido profesional
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="text-orange-500">✓</span>
-                Tratamiento de tapicería
-              </li>
-            </ul>
-          </div>
-          <div className="relative h-[300px] md:h-[400px] rounded-xl overflow-hidden">
-            <Image
-              src="/placeholder.svg?height=400&width=600"
-              alt="Servicio de Lavadero"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
-      </section> */}
+     
 
       {/* Reseñas de Google */}
       <GoogleReviews />

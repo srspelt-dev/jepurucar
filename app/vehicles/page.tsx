@@ -12,127 +12,174 @@ const phoneNumbers = [
 ]
 
 const vehicles = [
+  // Grupo Compacto
   { 
     id: 1, 
-    name: 'Toyota Etios', 
+    name: 'i10', 
     type: 'COMPACT', 
-    features: ['5 Pasajeros', 'Manual', 'Aire Acondicionado'], 
-    image: '/images/vehiculos/etios.jpeg'
+    features: [
+      'Bajo consumo',
+      'Línea económica',
+      'Manual y automática'
+    ], 
+    image: '/images/vehiculos/i10.jpg'
   },
   { 
     id: 2, 
-    name: 'Volkswagen Gol', 
+    name: 'Grand i10 hatchback', 
     type: 'COMPACT', 
-    features: ['5 Pasajeros', 'Manual', 'Bluetooth'], 
-    image: '/images/vehiculos/gol.png'
+    features: [
+      'Consumo equilibrado',
+      'Línea económica',
+      'Automática'
+    ], 
+    image: '/images/vehiculos/grand-i10.jpg'
   },
   { 
     id: 3, 
     name: 'HB20 Hatchback', 
     type: 'COMPACT', 
-    features: ['Versatil', 'Manual', 'Potencia y eficiencia en consumo', 'Admite conexiones Bluetooth, USB'], 
-    image: '/images/vehiculos/hb20-hatch.jpeg'
+    features: [
+      'Versátil',
+      'Manual',
+      'Línea intermedia',
+      'Bluetooth, USB, Apple CAR y Android Auto'
+    ], 
+    image: '/images/vehiculos/hb20-hatch.jpg'
   },
   { 
     id: 4, 
-    name: 'New Hyundai HB20S', 
-    type: 'SEDAN', 
-    features: ['Amplia Baulera', 'Gran Rendimiento de combustible', 'Ideal para viajes largos con mucho equipaje'], 
-    image: '/images/vehiculos/hb20s.jpeg'
+    name: 'New HB20 Hatchback', 
+    type: 'COMPACT', 
+    features: [
+      'Compacto',
+      'Manual',
+      'Línea intermedia',
+      'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
+    ], 
+    image: '/images/vehiculos/hb20-new-hatch.jpg'
   },
   { 
     id: 5, 
-    name: 'Kia Soluto', 
-    type: 'SEDAN', 
-    features: ['Amplia baulera', 'Versátil', 'Ideal ciudad y viajes'], 
-    image: '/images/vehiculos/soluto.jpeg'
+    name: 'New Grand i10 hatchback', 
+    type: 'COMPACT', 
+    features: [
+      'Tecnología vanguardia',
+      'Potente y económico',
+      'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
+    ], 
+    image: '/images/vehiculos/new-grand-i10.jpeg'
   },
+
+  // Grupo Sedan
   { 
     id: 6, 
-    name: 'GX3 PRO', 
-    type: 'SUV', 
-    features: ['Diseño elegante', 'Potente y tecnología de vanguardia', 'Ideal para viajes urbanos y sub-urbanos'], 
-    image: '/images/vehiculos/gx3.jpeg'
+    name: 'New Hyundai HB20S', 
+    type: 'SEDAN', 
+    features: [
+      'Amplia baulera',
+      'Gran rendimiento',
+      'Automática',
+      'Ideal para viajes largos'
+    ], 
+    image: '/images/vehiculos/hb20s.jpeg'
   },
   { 
     id: 7, 
-    name: 'Geely Coolray', 
-    type: 'SUV', 
-    features: ['5 Pasajeros', 'Automático', 'Full Extras'], 
-    image: '/images/vehiculos/coolray.jpeg'
+    name: 'Kia Soluto', 
+    type: 'SEDAN', 
+    features: [
+      'Amplia baulera',
+      'Ideal para uso urbano',
+      'Perfecto para viajes'
+    ], 
+    image: '/images/vehiculos/soluto.jpeg'
   },
+
+  // Grupo SUV
   { 
     id: 8, 
     name: 'Hyundai HB20X', 
     type: 'SUV', 
-    features: ['5 Pasajeros', 'Automático'], 
+    features: [
+      'Mini SUV compacta',
+      '5 pasajeros',
+      'Automático'
+    ], 
     image: '/images/vehiculos/hb20x.jpeg'
   },
   { 
     id: 9, 
-    name: 'JIM', 
+    name: 'GX3 PRO', 
     type: 'SUV', 
-    features: ['4 Pasajeros', 'Manual', '4x4'], 
-    image: '/images/vehiculos/jim.jpeg'
+    features: [
+      'Mini SUV moderna',
+      '5 pasajeros',
+      'Automático'
+    ], 
+    image: '/images/vehiculos/gx3.jpeg'
   },
   { 
     id: 10, 
-    name: 'Ssangyong Tivoli', 
+    name: 'KGM Tivoli', 
     type: 'SUV', 
-    features: ['5 Pasajeros', 'Automático', 'Full Extras'], 
-    image: '/images/vehiculos/tivoli.jpeg'
+    features: [
+      'Mini SUV',
+      'Interior amplio',
+      'Baulera compacta',
+      '5 pasajeros',
+      'Automático'
+    ], 
+    image: '/images/vehiculos/tivoli.jpg'
   },
   { 
     id: 11, 
-    name: 'Kia Carnival', 
-    type: 'VAN', 
-    features: ['12 Pasajeros', 'Manual', 'Aire Acondicionado'], 
-    image: '/images/vehiculos/carnival.jpeg'
-  },
-  {
-    id: 12,
-    name: 'ALL NEW TUCSON',
-    brand: 'Hyundai',
-    type: 'SUV',
+    name: 'Geely Coolray', 
+    type: 'SUV', 
     features: [
-      'SUV de alta tecnología',
-      'Seguridad y confort',
-      'Diseño elegante y moderno'
-    ],
+      'SUV amplia',
+      'Turbo',
+      'Automática',
+      'Baulera amplia'
+    ], 
+    image: '/images/vehiculos/coolray.jpeg'
+  },
+  { 
+    id: 12, 
+    name: 'ALL NEW TUCSON', 
+    type: 'SUV', 
+    features: [
+      'SUV amplia',
+      'Turbo',
+      'Automática',
+      'Amplia baulera'
+    ], 
     image: '/images/vehiculos/tucson.jpg'
   },
-  {
-    id: 13,
-    name: 'Grand i10 hatchback',
-    type: 'COMPACT',
+  { 
+    id: 13, 
+    name: 'JIM 4X4', 
+    type: 'SUV', 
     features: [
-        'Consumo equilibrado',
-        'Económico',
-        'Línea básica'
-    ],
-    image: '/images/vehiculos/grand-i10.jpeg'
+      'Motor ISUZU',
+      'Potente',
+      'Turbo',
+      'Automática'
+    ], 
+    image: '/images/vehiculos/jim.jpeg'
   },
-  {
-    id: 14,
-    name: 'New Grand i10 hatchback',
-    type: 'COMPACT',
+
+  // Grupo VAN
+  { 
+    id: 14, 
+    name: 'Carnival', 
+    type: 'VAN', 
     features: [
-      'Tecnología de vanguardia',
-      'Rendimiento elegante',
-      'Seguridad'
-    ],
-    image: '/images/vehiculos/new-grand-i10.jpeg'
-  },
-  {
-    id: 15,
-    name: 'i10',
-    type: 'COMPACT',
-    features: [
-      'Bajo consumo',
-      'Línea económica',
-      'Ideal para ciudad'
-    ],
-    image: '/images/vehiculos/i10.jpeg'
+      'Hasta 10 pasajeros',
+      'Automática',
+      'Turbo'
+    ], 
+    image: '/images/vehiculos/carnival.jpg'
   }
 ]
 
@@ -166,109 +213,105 @@ function VehiclesContent() {
     : vehicles
 
   return (
-    <div className="container mx-auto px-4 py-8 md:py-12 space-y-16 md:space-y-24">
+    <div className="container mx-auto px-4 py-8 md:py-12">
       {/* Hero Section */}
-      <section className="relative py-16 md:py-20 bg-gradient-to-r from-orange-500 to-orange-600 -mx-4 px-4">
-        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10"></div>
-        <div className="relative container mx-auto text-center text-white">
-          <h1 className="text-5xl font-bold mb-6">Nuestra Flota de Vehículos</h1>
-          <p className="text-xl max-w-3xl mx-auto opacity-90">
+      <section className="relative py-16 md:py-20 bg-gradient-to-r from-orange-500 to-orange-600 rounded-2xl mb-12">
+        <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10 rounded-2xl"></div>
+        <div className="relative container mx-auto text-center text-white px-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestra Flota de Vehículos</h1>
+          <p className="text-xl max-w-2xl mx-auto opacity-90">
             Descubre nuestra amplia selección de vehículos para todas tus necesidades. 
             Desde económicos compactos hasta lujosas SUVs.
           </p>
         </div>
       </section>
 
-      {/* Contenido Principal */}
-      <section className="container mx-auto -mt-12 md:-mt-20">
-        {/* Filtros de Categoría */}
-        <div className="bg-white p-8 rounded-xl shadow-lg mb-8">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">Categorías de Vehículos</h2>
-          <div className="flex flex-wrap gap-4">
+      {/* Filtros de Categoría */}
+      <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-12 max-w-4xl mx-auto">
+        <h2 className="text-2xl font-semibold mb-6 text-center text-gray-800">Categorías de Vehículos</h2>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <button
+            onClick={() => setSelectedType(null)}
+            className={`px-6 py-2 rounded-full transition-all duration-300 ${
+              selectedType === null 
+                ? 'bg-orange-500 text-white transform scale-105 shadow-md' 
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
+            }`}
+          >
+            Todos
+          </button>
+          {['COMPACT', 'SEDAN', 'SUV', 'VAN'].map(type => (
             <button
-              onClick={() => setSelectedType(null)}
-              className={`px-6 py-2 rounded-full transition-colors ${
-                selectedType === null 
-                  ? 'bg-orange-500 text-white' 
+              key={type}
+              onClick={() => setSelectedType(type)}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                selectedType === type 
+                  ? 'bg-orange-500 text-white transform scale-105 shadow-md' 
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              Todos
+              {type === 'COMPACT' ? 'Compacto' :
+               type === 'SEDAN' ? 'Sedán' :
+               type === 'SUV' ? 'SUV' : 'Van'}
             </button>
-            {['COMPACT', 'SEDAN', 'SUV', 'VAN'].map(type => (
-              <button
-                key={type}
-                onClick={() => setSelectedType(type)}
-                className={`px-6 py-2 rounded-full transition-colors ${
-                  selectedType === type 
-                    ? 'bg-orange-500 text-white' 
-                    : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
-                }`}
-              >
-                {type === 'COMPACT' ? 'Compacto' :
-                 type === 'SEDAN' ? 'Sedán' :
-                 type === 'SUV' ? 'SUV' : 'Van'}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Grid de Vehículos */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-          {filteredVehicles.map((vehicle) => (
-            <div 
-              key={vehicle.id} 
-              className="bg-white shadow-lg rounded-lg overflow-hidden 
-                         transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
-            >
-              <div className="relative">
-                <Image
-                  src={vehicle.image}
-                  alt={vehicle.name}
-                  width={300}
-                  height={200}
-                  className="w-full object-cover transition-transform duration-500 hover:scale-110"
-                />
-                <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm
-                                transform transition-all duration-300 hover:-translate-y-1">
-                  {vehicle.type === 'COMPACT' ? 'Compacto' :
-                   vehicle.type === 'SEDAN' ? 'Sedán' :
-                   vehicle.type === 'SUV' ? 'SUV' : 'Van'}
-                </div>
-              </div>
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold mb-2 transition-colors duration-300 hover:text-orange-500">
-                  {vehicle.name}
-                </h2>
-                <div className="mb-4">
-                  {vehicle.features.map((feature, index) => (
-                    <span 
-                      key={index} 
-                      className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold 
-                                 text-gray-700 mr-2 mb-2 transition-all duration-300 
-                                 hover:bg-orange-100 hover:text-orange-700 transform hover:-translate-y-1"
-                    >
-                      {feature}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex justify-end">
-                  <a 
-                    href="#"
-                    onClick={(e) => handleReserveClick(e, vehicle.name)}
-                    className="bg-orange-500 text-white px-6 py-2 rounded-full 
-                     transform transition-all duration-300 
-                     hover:bg-orange-600 hover:scale-105 hover:shadow-lg
-                     active:scale-95"
-                  >
-                    Reservar
-                  </a>
-                </div>
-              </div>
-            </div>
           ))}
         </div>
-      </section>
+      </div>
+
+      {/* Grid de Vehículos */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+        {filteredVehicles.map((vehicle) => (
+          <div 
+            key={vehicle.id} 
+            className="bg-white shadow-lg rounded-xl overflow-hidden 
+                       transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+          >
+            <div className="relative aspect-[4/3]">
+              <Image
+                src={vehicle.image}
+                alt={vehicle.name}
+                fill
+                className="object-cover transition-transform duration-500 hover:scale-110"
+              />
+              <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm
+                              transform transition-all duration-300 hover:-translate-y-1 shadow-md">
+                {vehicle.type === 'COMPACT' ? 'Compacto' :
+                 vehicle.type === 'SEDAN' ? 'Sedán' :
+                 vehicle.type === 'SUV' ? 'SUV' : 'Van'}
+              </div>
+            </div>
+            <div className="p-6">
+              <h2 className="text-xl font-semibold mb-4 transition-colors duration-300 hover:text-orange-500">
+                {vehicle.name}
+              </h2>
+              <div className="mb-6">
+                {vehicle.features.map((feature, index) => (
+                  <span 
+                    key={index} 
+                    className="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold 
+                               text-gray-700 mr-2 mb-2 transition-all duration-300 
+                               hover:bg-orange-100 hover:text-orange-700 transform hover:-translate-y-1"
+                  >
+                    {feature}
+                  </span>
+                ))}
+              </div>
+              <div className="flex justify-center">
+                <a 
+                  href="#"
+                  onClick={(e) => handleReserveClick(e, vehicle.name)}
+                  className="bg-orange-500 text-white px-8 py-2 rounded-full w-full text-center
+                           transform transition-all duration-300 
+                           hover:bg-orange-600 hover:scale-105 hover:shadow-lg
+                           active:scale-95"
+                >
+                  Reservar
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
