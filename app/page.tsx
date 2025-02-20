@@ -111,7 +111,7 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/vehiculos/h1.jpeg"
+                src="/images/vehiculos/carnival.jpg"
                 alt="Van"
                 width={400}
                 height={300}
