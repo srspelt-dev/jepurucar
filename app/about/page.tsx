@@ -130,7 +130,7 @@ export default function About() {
               {/* Video de Tana - TikTok 2 */}
               <div className="aspect-[9/16] h-[500px] md:h-[600px]">
                 <iframe
-                  src="https://www.tiktok.com/embed/v2/ZMkc5PKep"
+                  src="https://www.tiktok.com/embed/v2/7441573211407404344"
                   className="w-full h-full rounded-xl shadow-lg"
                   allowFullScreen
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
