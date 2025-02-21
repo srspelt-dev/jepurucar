@@ -106,43 +106,62 @@ export default function About() {
         </div>
       </section>
 
-     
-   {/* Sección de Experiencias de Influencers */}
-   <section className="py-16 bg-gradient-to-br from-orange-50 to-white">
+      {/* Sección de Experiencias de Influencers */}
+      <section className="py-16 bg-gradient-to-br from-orange-50 to-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-orange-500">
             Experiencias con Jepuru Car
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {/* Video de Tana */}
-            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7387513574626757894"
-                className="w-full h-full rounded-xl shadow-lg"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
-            </div>
+          {/* TikToks */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-gray-800">TikTok</h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Video de Tana - TikTok 1 */}
+              <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+                <iframe
+                  src="https://www.tiktok.com/embed/v2/7387513574626757894"
+                  className="w-full h-full rounded-xl shadow-lg"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
 
-            {/* Video de Marcelo Gabriel */}
-            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7437173755367148855"
-                className="w-full h-full rounded-xl shadow-lg"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+              {/* Video de Tana - TikTok 2 */}
+              <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+                <iframe
+                  src="https://www.tiktok.com/embed/v2/ZMkc5PKep"
+                  className="w-full h-full rounded-xl shadow-lg"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
             </div>
+          </div>
 
-            {/* Video de Miss */}
-            <div className="aspect-[9/16] h-[500px] md:h-[600px]">
-              <iframe
-                src="https://www.tiktok.com/embed/v2/7437173755367148855"
-                className="w-full h-full rounded-xl shadow-lg"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              ></iframe>
+          {/* Instagram Reels */}
+          <div>
+            <h3 className="text-2xl font-semibold text-center mb-8 text-gray-800">Instagram</h3>
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {/* Video de Tana - Instagram 1 */}
+              <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+                <iframe
+                  src="https://www.instagram.com/reel/C9A0nL7h1Tu/embed"
+                  className="w-full h-full rounded-xl shadow-lg"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
+
+              {/* Video de Tana - Instagram 2 */}
+              <div className="aspect-[9/16] h-[500px] md:h-[600px]">
+                <iframe
+                  src="https://www.instagram.com/reel/DA6zwd3PJwf/embed"
+                  className="w-full h-full rounded-xl shadow-lg"
+                  allowFullScreen
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>
