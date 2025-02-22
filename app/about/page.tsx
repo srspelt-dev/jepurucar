@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react'
+import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, X } from 'lucide-react'
 
 export default function About() {
   return (
@@ -212,8 +212,8 @@ export default function About() {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Horarios de atención:</h3>
               <div className="text-gray-600 space-y-1">
-                <p>Lunes a Viernes: 09:00 a 17:30</p>
-                <p>Sábados: 09:00 a 13:00 hs</p>
+                <p>Lunes a Viernes: 08:00 a 17:30</p>
+                <p>Sábados: 08:00 a 12:00 hs</p>
               </div>
             </div>
           </div>
@@ -255,6 +255,20 @@ export default function About() {
                 className="bg-white p-4 rounded-full shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
               >
                 <Linkedin className="w-6 h-6 text-[#0A66C2]" />
+              </a>
+              <a 
+                href="https://x.com/jepurucar" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-white p-4 rounded-full shadow-sm hover:shadow-md hover:scale-110 transition-all duration-300"
+              >
+                <svg 
+                  className="w-6 h-6" 
+                  fill="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
               </a>
             </div>
           </div>

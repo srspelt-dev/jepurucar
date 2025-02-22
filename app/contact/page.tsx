@@ -1,4 +1,10 @@
+'use client'
+
 export default function Contact() {
+  const handleWhatsAppClick = (phoneNumber: string) => {
+    window.open(`https://wa.me/${phoneNumber}`, '_blank')
+  }
+
   return (
     <div className="container mx-auto px-4 py-12 space-y-24">
       {/* Hero Section */}
@@ -32,9 +38,34 @@ export default function Contact() {
                 <span className="text-orange-500 text-xl">⏰</span>
                 <div>
                   <p className="font-medium">Horario de Atención</p>
-                  <p className="text-gray-600">Lunes a Viernes 9:00 - 17:30</p>
-                  <p className="text-gray-600">Sábados: 9:00 - 13:00</p>
+                  <p className="text-gray-600">Lunes a Viernes 8:00 - 17:30</p>
+                  <p className="text-gray-600">Sábados: 8:00 - 12:00</p>
                   <p className="text-gray-600">Domingo: Cerrado</p>
+                </div>
+              </div>
+              {/*Teléfono*/}
+              <div className="flex items-center space-x-3">
+                <span className="text-orange-500 text-xl">📞</span>
+                <div>
+                  <p className="font-medium">Teléfonos</p>
+                  <button 
+                    className="text-gray-600 hover:text-orange-500 transition-colors block w-full text-left py-1"
+                    onClick={() => handleWhatsAppClick('595961590627')}
+                  >
+                    +595 961 590 627
+                  </button>
+                  <button 
+                    className="text-gray-600 hover:text-orange-500 transition-colors block w-full text-left py-1"
+                    onClick={() => handleWhatsAppClick('595974302500')}
+                  >
+                    +595 974 302 500
+                  </button>
+                  <button 
+                    className="text-gray-600 hover:text-orange-500 transition-colors block w-full text-left py-1"
+                    onClick={() => handleWhatsAppClick('595971951077')}
+                  >
+                    +595 971 951 077
+                  </button>
                 </div>
               </div>
             </div>
@@ -87,7 +118,6 @@ export default function Contact() {
                   <option value="">Selecciona una opción</option>
                   <option value="rental">Alquiler de Vehículo</option>
                   <option value="info">Información General</option>
-                  <option value="support">Soporte Técnico</option>
                   <option value="other">Otro</option>
                 </select>
               </div>

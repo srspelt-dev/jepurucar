@@ -243,7 +243,7 @@ function VehiclesContent() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Nuestra Flota de Vehículos</h1>
           <p className="text-xl max-w-2xl mx-auto opacity-90">
             Descubre nuestra amplia selección de vehículos para todas tus necesidades. 
-            Desde económicos compactos hasta lujosas SUVs.
+            Desde económicos compactos hasta premium SUVs.
           </p>
         </div>
       </section>

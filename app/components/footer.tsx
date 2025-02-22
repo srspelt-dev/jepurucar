@@ -103,8 +103,8 @@ export function Footer() {
                 </div>
                 <div>
                   <h4 className="font-semibold mb-2">Horario de Atención</h4>
-                  <p className="text-orange-100">Lunes a Viernes: 09:00 a 17:30</p>
-                  <p className="text-orange-100">Sábados: 09:00 a 13:00 hs</p>
+                  <p className="text-orange-100">Lunes a Viernes: 08:00 a 17:30</p>
+                  <p className="text-orange-100">Sábados: 08:00 a 12:00 hs</p>
                 </div>
               </div>
             </div>
@@ -129,6 +129,21 @@ export function Footer() {
                   aria-label="Instagram"
                 >
                   <Instagram className="w-6 h-6" />
+                </a>
+                <a 
+                  href="https://x.com/jepurucar" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-orange-200 transition-transform hover:scale-110" 
+                  aria-label="X (Twitter)"
+                >
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
                 </a>
                 <a 
                   href="https://www.linkedin.com/company/jepurucar-rent-a-car" 

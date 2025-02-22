@@ -19,7 +19,7 @@ export default function Home() {
               Bienvenidos a Jepuru Car
             </h1>
             <p className="text-xl text-gray-700">
-              Disfruta de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
+              Disfrutá de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
               Ya sea para negocios o placer, tenemos el vehículo perfecto para ti.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
