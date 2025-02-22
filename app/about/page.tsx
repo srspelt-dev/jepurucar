@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, X } from 'lucide-react'
+import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react'
 
 export default function About() {
   return (
