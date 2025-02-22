@@ -70,10 +70,32 @@ const vehicles = [
     ], 
     image: '/images/vehiculos/new-grand-i10.jpeg'
   },
+  { 
+    id: 6, 
+    name: 'Etios hatchback', 
+    type: 'COMPACT', 
+    features: [
+      'Automática',
+      'Eficiente consumo',
+      'Bluetooth, USB, Apple CAR y Android Auto'
+    ], 
+    image: '/images/vehiculos/etios.jpeg'
+  },
+  { 
+    id: 7, 
+    name: 'VW Gol hatchback', 
+    type: 'COMPACT', 
+    features: [
+      'Automática',
+      'Potente',
+      'Bluetooth, USB'
+    ], 
+    image: '/images/vehiculos/gol.jpeg'
+  },
 
   // Grupo Sedan
   { 
-    id: 6, 
+    id: 8, 
     name: 'New Hyundai HB20S', 
     type: 'SEDAN', 
     features: [
@@ -85,7 +107,7 @@ const vehicles = [
     image: '/images/vehiculos/new-hb20s-true.jpeg'
   },
   { 
-    id: 7, 
+    id: 9, 
     name: 'Kia Soluto', 
     type: 'SEDAN', 
     features: [
@@ -98,7 +120,7 @@ const vehicles = [
 
   // Grupo SUV
   { 
-    id: 8, 
+    id: 10, 
     name: 'Hyundai HB20X', 
     type: 'SUV', 
     features: [
@@ -109,7 +131,7 @@ const vehicles = [
     image: '/images/vehiculos/hb20x.jpeg'
   },
   { 
-    id: 9, 
+    id: 11, 
     name: 'GX3 PRO', 
     type: 'SUV', 
     features: [
@@ -120,7 +142,7 @@ const vehicles = [
     image: '/images/vehiculos/gx3.jpeg'
   },
   { 
-    id: 10, 
+    id: 12, 
     name: 'KGM Tivoli', 
     type: 'SUV', 
     features: [
@@ -133,7 +155,7 @@ const vehicles = [
     image: '/images/vehiculos/tivoli.jpg'
   },
   { 
-    id: 11, 
+    id: 13, 
     name: 'Geely Coolray', 
     type: 'SUV', 
     features: [
@@ -145,7 +167,7 @@ const vehicles = [
     image: '/images/vehiculos/coolray.jpeg'
   },
   { 
-    id: 12, 
+    id: 14, 
     name: 'ALL NEW TUCSON', 
     type: 'SUV', 
     features: [
@@ -157,7 +179,7 @@ const vehicles = [
     image: '/images/vehiculos/tucson.jpg'
   },
   { 
-    id: 13, 
+    id: 15, 
     name: 'JIM 4X4', 
     type: 'SUV', 
     features: [
@@ -171,7 +193,7 @@ const vehicles = [
 
   // Grupo VAN
   { 
-    id: 14, 
+    id: 16, 
     name: 'Carnival', 
     type: 'VAN', 
     features: [
