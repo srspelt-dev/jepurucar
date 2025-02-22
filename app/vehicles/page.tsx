@@ -82,7 +82,7 @@ const vehicles = [
       'Automática',
       'Ideal para viajes largos'
     ], 
-    image: '/images/vehiculos/hb20s.jpg'
+    image: '/images/vehiculos/new-hb20s-true.jpeg'
   },
   { 
     id: 7, 
