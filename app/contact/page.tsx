@@ -1,6 +1,41 @@
 'use client'
 
+import { useState } from 'react'
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  })
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Crear el cuerpo del correo
+    const emailBody = `
+      Nombre: ${formData.name}
+      Email: ${formData.email}
+      Teléfono: ${formData.phone}
+      Asunto: ${formData.subject}
+      Mensaje: ${formData.message}
+    `
+
+    // Abrir el cliente de correo predeterminado
+    window.location.href = `mailto:reservas@jepurucar.com.py?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`
+
+    // Limpiar el formulario
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      subject: '',
+      message: ''
+    })
+  }
+
   const handleWhatsAppClick = (phoneNumber: string) => {
     window.open(`https://wa.me/${phoneNumber}`, '_blank')
   }
@@ -74,13 +109,15 @@ export default function Contact() {
           {/* Formulario de Contacto */}
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h2 className="text-2xl font-semibold mb-6 text-gray-800">Envíanos un Mensaje</h2>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="block mb-2 font-medium text-gray-700">Nombre Completo</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name" 
+                  value={formData.name}
+                  onChange={(e) => setFormData({...formData, name: e.target.value})}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
                   placeholder="Ingresa tu nombre"
@@ -92,6 +129,8 @@ export default function Contact() {
                   type="email" 
                   id="email" 
                   name="email" 
+                  value={formData.email}
+                  onChange={(e) => setFormData({...formData, email: e.target.value})}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
                   placeholder="tucorreo@ejemplo.com"
@@ -103,6 +142,8 @@ export default function Contact() {
                   type="tel" 
                   id="phone" 
                   name="phone" 
+                  value={formData.phone}
+                  onChange={(e) => setFormData({...formData, phone: e.target.value})}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   placeholder="(0981) 123-456"
                 />
@@ -112,6 +153,8 @@ export default function Contact() {
                 <select 
                   id="subject" 
                   name="subject" 
+                  value={formData.subject}
+                  onChange={(e) => setFormData({...formData, subject: e.target.value})}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
                 >
@@ -127,6 +170,8 @@ export default function Contact() {
                   id="message" 
                   name="message" 
                   rows={4} 
+                  value={formData.message}
+                  onChange={(e) => setFormData({...formData, message: e.target.value})}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
                   required
                   placeholder="Escribe tu mensaje aquí..."

@@ -8,8 +8,12 @@ import { WhatsAppButton } from './components/whatsapp-button'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Jepuru Car',
-  description: 'Alquiler de Vehiculos Paraguay',
+  title: 'Jepuru Car - Alquiler de Vehículos',
+  description: 'Alquiler de vehículos en Paraguay',
+  icons: {
+    icon: '/images/jepurucar.png',
+    apple: '/images/jepurucar.png',
+  },
 }
 
 export default function RootLayout({
@@ -18,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={`${inter.className} bg-white text-gray-800`}>
         <Header />
         <main className="min-h-screen">
