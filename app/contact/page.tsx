@@ -14,7 +14,6 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Crear el cuerpo del correo
     const emailBody = `
       Nombre: ${formData.name}
       Email: ${formData.email}
@@ -23,10 +22,8 @@ export default function Contact() {
       Mensaje: ${formData.message}
     `
 
-    // Abrir el cliente de correo predeterminado
     window.location.href = `mailto:reservas@jepurucar.com.py?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`
 
-    // Limpiar el formulario
     setFormData({
       name: '',
       email: '',
@@ -159,9 +156,9 @@ export default function Contact() {
                   required
                 >
                   <option value="">Selecciona una opción</option>
-                  <option value="rental">Alquiler de Vehículo</option>
+                  <option value="Alquiler de Vehículo">Alquiler de Vehículo</option>
                   <option value="info">Información General</option>
-                  <option value="other">Otro</option>
+                  <option value="Otro">Otro</option>
                 </select>
               </div>
               <div>
@@ -190,5 +187,5 @@ export default function Contact() {
     </div>
   )
 }
-  
+
   
