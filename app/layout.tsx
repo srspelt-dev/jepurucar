@@ -35,7 +35,11 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'tu-código-de-verificación-de-google',
-  }
+  },
+  icons: {
+    icon: '/images/jepurucar.png',
+    apple: '/images/jepurucar.png',
+  },
 }
 
 export default function RootLayout({
@@ -50,9 +54,7 @@ export default function RootLayout({
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2295007712395032"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
-        {/* Structured Data para Google */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
