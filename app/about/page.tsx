@@ -178,12 +178,11 @@ export default function About() {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Teléfonos:</h3>
               <p className="text-gray-600 space-y-2">
-                <span className="block">📍 Local 18 de Julio - San Vicente: <br />
+                <span className="block">📍 Local 1 - Barrio Santa María: <br />
                   <a href="tel:+595961590627" className="hover:text-orange-500 transition-colors">
                     +595 961 590 627
                   </a>
-                </span>
-                <span className="block">📍 Local Paseo Die Ecke - Zona Aeropuerto: <br />
+                  <br />
                   <a href="tel:+595974302500" className="hover:text-orange-500 transition-colors">
                     +595 974 302 500
                   </a>

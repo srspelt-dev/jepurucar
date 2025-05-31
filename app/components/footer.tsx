@@ -5,91 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-gradient-to-b from-orange-500 to-orange-600 text-white">
       <div className="container mx-auto px-4 py-12 md:py-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
-          {/* Sucursal 1 */}
-          <div className="space-y-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm flex flex-col">
-            <h3 className="text-2xl font-bold mb-4 border-b border-orange-400 pb-2">Local 1</h3>
-            <div className="flex-1">
-              <div className="flex items-start space-x-2 mb-4">
-                <MapPin className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">Calle 18 de Julio</p>
-                  <p className="text-orange-100">Asunción, Paraguay</p>
-                  <Link 
-                    href="https://maps.google.com/?q=-25.324583775414606,-57.62834331691925"
-                    target="_blank"
-                    className="text-orange-200 hover:text-white text-sm inline-flex items-center gap-1 mt-1
-                             transition-colors duration-300"
-                  >
-                    <MapPin className="w-4 h-4" /> Ver en Google Maps
-                  </Link>
-                </div>
-              </div>
-              <div className="flex items-start space-x-2">
-                <Phone className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
-                <div className="space-y-2">
-                  <Link 
-                    href="https://wa.me/595961590627"
-                    target="_blank"
-                    className="hover:text-orange-200 transition-colors flex items-center gap-2 group"
-                  >
-                    +595 961 590 627
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.393481526346!2d-57.6309557887817!3d-25.324574077535853!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da9c8bfaab85d%3A0x60c34ce4bffc7629!2sJepuru%20Car%20-%20Rent%20a%20Car!5e0!3m2!1ses!2spy!4v1739066163206!5m2!1ses!2spy"
-              className="w-full h-48 rounded-lg mt-auto"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-
-          {/* Sucursal 2 */}
-          <div className="space-y-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm flex flex-col">
-            <h3 className="text-2xl font-bold mb-4 border-b border-orange-400 pb-2">Local 2</h3>
-            <div className="flex-1">
-              <div className="flex items-start space-x-2 mb-4">
-                <MapPin className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">Paseo Die Ecke</p>
-                  <p className="text-orange-100">Zona Aeropuerto Silvio Pettirossi</p>
-                  <Link 
-                    href="https://maps.google.com/?q=-25.283241877655648,-57.55996512399201"
-                    target="_blank"
-                    className="text-orange-200 hover:text-white text-sm inline-flex items-center gap-1 mt-1
-                             transition-colors duration-300"
-                  >
-                    <MapPin className="w-4 h-4" /> Ver en Google Maps
-                  </Link>
-                </div>
-              </div>
-              <div className="flex items-start space-x-2">
-                <Phone className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
-                <div className="space-y-2">
-                  <Link 
-                    href="https://wa.me/595974302500"
-                    target="_blank"
-                    className="hover:text-orange-200 transition-colors flex items-center gap-2 group"
-                  >
-                    +595 974 302 500
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.623674830587!2d-57.55996512399201!3d-25.283241877655648!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945da9e4f37b49cb%3A0x5bcce673dd30f826!2sJepuru%20Car%20-%20Paseo%20Die%20Ecke!5e0!3m2!1ses!2spy!4v1738714060226!5m2!1ses!2spy"
-              className="w-full h-48 rounded-lg mt-auto"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
-
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Información de Contacto y Redes Sociales */}
           <div className="space-y-8 bg-white/10 p-6 rounded-xl backdrop-blur-sm">
             <div>
@@ -171,6 +87,49 @@ export function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+
+          {/* Sucursal 1 */}
+          <div className="space-y-4 bg-white/10 p-6 rounded-xl backdrop-blur-sm flex flex-col">
+            <h3 className="text-2xl font-bold mb-4 border-b border-orange-400 pb-2">Local 1</h3>
+            <div className="flex-1">
+              <div className="flex items-start space-x-2 mb-4">
+                <MapPin className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="font-medium">Calle Fortín Galpón casi 8 de Septiembre</p>
+                  <p className="text-orange-100">Barrio Santa María, Asunción</p>
+                  <p className="text-orange-100">A 3 cuadras de Santa Teresa, a 50 metros de Madame Linch</p>
+                  <Link 
+                    href="https://maps.google.com/?q=-25.299740999999997,-57.551235999999996"
+                    target="_blank"
+                    className="text-orange-200 hover:text-white text-sm inline-flex items-center gap-1 mt-1
+                             transition-colors duration-300"
+                  >
+                    <MapPin className="w-4 h-4" /> Ver en Google Maps
+                  </Link>
+                </div>
+              </div>
+              <div className="flex items-start space-x-2">
+                <Phone className="w-5 h-5 text-orange-200 mt-1 flex-shrink-0" />
+                <div className="space-y-2">
+                  <Link 
+                    href="https://wa.me/595961590627"
+                    target="_blank"
+                    className="hover:text-orange-200 transition-colors flex items-center gap-2 group"
+                  >
+                    +595 961 590 627
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3607.1328273516588!2d-57.551235999999996!3d-25.299740999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDE3JzU5LjEiUyA1N8KwMzMnMDQuNSJX!5e0!3m2!1ses!2spy!4v1748714920391!5m2!1ses!2spy"
+              className="w-full h-48 rounded-lg mt-auto"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
 
