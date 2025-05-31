@@ -4,10 +4,13 @@ import { useState } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
 
 const phoneNumbers = [
-  '+595961590627',
-  '+595974302500',
-  '+595971951077',
+  // '+595961590627',
+  // '+595974302500',
+  // '+595971951077',
+  '+595983214111'
 ]
+
+const mensaje = encodeURIComponent('Hola Jepuru Car, estoy en la página web y quiero cotización')
 
 export function WhatsAppButton() {
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -17,12 +20,12 @@ export function WhatsAppButton() {
     // Cambia al siguiente número, volviendo al primero si llega al final
     setCurrentIndex((prev) => (prev + 1) % phoneNumbers.length)
     // Abre WhatsApp con el número actual
-    window.open(`https://wa.me/${phoneNumbers[currentIndex]}`, '_blank')
+    window.open(`https://wa.me/${phoneNumbers[currentIndex]}?text=${mensaje}`, '_blank')
   }
 
   return (
     <a
-      href={`https://wa.me/${phoneNumbers[currentIndex]}`}
+      href={`https://wa.me/${phoneNumbers[currentIndex]}?text=${mensaje}`}
       onClick={handleClick}
       target="_blank"
       rel="noopener noreferrer"
