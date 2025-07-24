@@ -14,12 +14,16 @@ export function Header() {
         <div className="flex justify-between items-center">
           <Link href="/" className="flex-shrink-0">
             <Image 
-              src="/images/jepurucar.png"
+              src="https://res.cloudinary.com/doblti2c5/image/upload/w_240,q_auto,f_auto/v1753395929/jepuru/brand/logo.png"
               alt="Jepuru Car"
               width={240}
               height={80}
               priority
               className="object-contain p-2 rounded max-w-[180px] md:max-w-[240px]"
+              onError={(e) => {
+                const target = e.target as HTMLImageElement;
+                target.src = '/images/jepurucar.png';
+              }}
             />
           </Link>
 

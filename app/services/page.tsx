@@ -88,21 +88,29 @@ export default function Services() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="flex items-center gap-2">
                   <Image 
-                    src="/images/flags/br.png" 
+                    src="https://res.cloudinary.com/doblti2c5/image/upload/w_32,h_24,c_fill,q_auto,f_auto/v1753395932/jepuru/flags/brasil.png" 
                     alt="Brasil" 
                     width={32} 
                     height={24}
                     className="rounded shadow-sm transform transition-transform hover:scale-110"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/images/flags/br.png';
+                    }}
                   />
                   <span className="text-sm text-gray-600">Brasil</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Image 
-                    src="/images/flags/ar.png" 
+                    src="https://res.cloudinary.com/doblti2c5/image/upload/w_32,h_24,c_fill,q_auto,f_auto/v1753395930/jepuru/flags/argentina.png" 
                     alt="Argentina" 
                     width={32} 
                     height={24}
                     className="rounded shadow-sm transform transition-transform hover:scale-110"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = '/images/flags/ar.png';
+                    }}
                   />
                   <span className="text-sm text-gray-600">Argentina</span>
                 </div>
