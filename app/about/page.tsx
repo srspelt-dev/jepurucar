@@ -1,4 +1,14 @@
+'use client'
+
 import Image from 'next/image'
+
+// Función para obtener URL optimizada de Cloudinary
+const getOptimizedImageUrl = (imageName: string, width: number = 800) => {
+  if (imageName.includes('cloudinary.com')) {
+    return imageName.replace('/upload/', `/upload/w_${width},q_auto,f_auto/`);
+  }
+  return imageName;
+};
 import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react'
 
 export default function About() {
@@ -78,10 +88,14 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/Equipo/equipo1.jpg"
+                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360773/jepuru/equipo/equipo1', 800)}
                 alt="Equipo de Funcionarios Jepuru"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/Equipo/equipo1.jpg';
+                }}
               />
             </div>
             <h3 className="text-xl font-semibold text-center">
@@ -93,10 +107,14 @@ export default function About() {
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
               <Image
-                src="/images/Equipo/lavadero.jpg"
+                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360777/jepuru/equipo/lavadero', 800)}
                 alt="Equipo de Lavadero"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/Equipo/lavadero.jpg';
+                }}
               />
             </div>
             <h3 className="text-xl font-semibold text-center">

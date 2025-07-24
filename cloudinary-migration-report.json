@@ -1,0 +1,439 @@
+{
+  "successful": [
+    {
+      "originalPath": "public/images/vehiculos/Carnival.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360648/jepuru/vehiculos/Carnival.jpg",
+      "publicId": "jepuru/vehiculos/Carnival",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 229374
+    },
+    {
+      "originalPath": "public/images/vehiculos/WhatsApp Image 2024-08-14 at 09.40.10.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360650/jepuru/vehiculos/WhatsApp%20Image%202024-08-14%20at%2009.40.10.jpg",
+      "publicId": "jepuru/vehiculos/WhatsApp Image 2024-08-14 at 09.40.10",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 177530
+    },
+    {
+      "originalPath": "public/images/vehiculos/coolray.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360653/jepuru/vehiculos/coolray.jpg",
+      "publicId": "jepuru/vehiculos/coolray",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 180105
+    },
+    {
+      "originalPath": "public/images/vehiculos/coolrayatras.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360656/jepuru/vehiculos/coolrayatras.jpg",
+      "publicId": "jepuru/vehiculos/coolrayatras",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 200760
+    },
+    {
+      "originalPath": "public/images/vehiculos/coolraycostado.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360659/jepuru/vehiculos/coolraycostado.jpg",
+      "publicId": "jepuru/vehiculos/coolraycostado",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 211489
+    },
+    {
+      "originalPath": "public/images/vehiculos/etios atras.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360662/jepuru/vehiculos/etios%20atras.jpg",
+      "publicId": "jepuru/vehiculos/etios atras",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 210739
+    },
+    {
+      "originalPath": "public/images/vehiculos/etios.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360665/jepuru/vehiculos/etios.jpg",
+      "publicId": "jepuru/vehiculos/etios",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 186967
+    },
+    {
+      "originalPath": "public/images/vehiculos/gol.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360667/jepuru/vehiculos/gol.jpg",
+      "publicId": "jepuru/vehiculos/gol",
+      "resourceType": "image",
+      "width": 600,
+      "height": 800,
+      "format": "jpg",
+      "size": 144460
+    },
+    {
+      "originalPath": "public/images/vehiculos/gol.png",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360671/jepuru/vehiculos/gol.jpg",
+      "publicId": "jepuru/vehiculos/gol",
+      "resourceType": "image",
+      "width": 1200,
+      "height": 540,
+      "format": "jpg",
+      "size": 161664
+    },
+    {
+      "originalPath": "public/images/vehiculos/grand-i10.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360675/jepuru/vehiculos/grand-i10.jpg",
+      "publicId": "jepuru/vehiculos/grand-i10",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 220231
+    },
+    {
+      "originalPath": "public/images/vehiculos/gx3.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360678/jepuru/vehiculos/gx3.jpg",
+      "publicId": "jepuru/vehiculos/gx3",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 181110
+    },
+    {
+      "originalPath": "public/images/vehiculos/gx3atras.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360681/jepuru/vehiculos/gx3atras.jpg",
+      "publicId": "jepuru/vehiculos/gx3atras",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 183060
+    },
+    {
+      "originalPath": "public/images/vehiculos/gx3costado.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360684/jepuru/vehiculos/gx3costado.jpg",
+      "publicId": "jepuru/vehiculos/gx3costado",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 215942
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20-hatch.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360686/jepuru/vehiculos/hb20-hatch.jpg",
+      "publicId": "jepuru/vehiculos/hb20-hatch",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 182151
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20-new-hatch.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360689/jepuru/vehiculos/hb20-new-hatch.jpg",
+      "publicId": "jepuru/vehiculos/hb20-new-hatch",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 155003
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360692/jepuru/vehiculos/hb20.jpg",
+      "publicId": "jepuru/vehiculos/hb20",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 207137
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20atras.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360695/jepuru/vehiculos/hb20atras.jpg",
+      "publicId": "jepuru/vehiculos/hb20atras",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 225429
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20s.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360699/jepuru/vehiculos/hb20s.jpg",
+      "publicId": "jepuru/vehiculos/hb20s",
+      "resourceType": "image",
+      "width": 1063,
+      "height": 800,
+      "format": "jpg",
+      "size": 200994
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20s2.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360702/jepuru/vehiculos/hb20s2.jpg",
+      "publicId": "jepuru/vehiculos/hb20s2",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 145242
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20scostado.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360704/jepuru/vehiculos/hb20scostado.jpg",
+      "publicId": "jepuru/vehiculos/hb20scostado",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 202833
+    },
+    {
+      "originalPath": "public/images/vehiculos/hb20x.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360707/jepuru/vehiculos/hb20x.jpg",
+      "publicId": "jepuru/vehiculos/hb20x",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 225515
+    },
+    {
+      "originalPath": "public/images/vehiculos/i10.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360710/jepuru/vehiculos/i10.jpg",
+      "publicId": "jepuru/vehiculos/i10",
+      "resourceType": "image",
+      "width": 600,
+      "height": 800,
+      "format": "jpg",
+      "size": 127820
+    },
+    {
+      "originalPath": "public/images/vehiculos/jim.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360713/jepuru/vehiculos/jim.jpg",
+      "publicId": "jepuru/vehiculos/jim",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 162059
+    },
+    {
+      "originalPath": "public/images/vehiculos/jimcostado.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360715/jepuru/vehiculos/jimcostado.jpg",
+      "publicId": "jepuru/vehiculos/jimcostado",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 232267
+    },
+    {
+      "originalPath": "public/images/vehiculos/new-grand-i10.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360718/jepuru/vehiculos/new-grand-i10.jpg",
+      "publicId": "jepuru/vehiculos/new-grand-i10",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 120140
+    },
+    {
+      "originalPath": "public/images/vehiculos/new-hb20s-true.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360721/jepuru/vehiculos/new-hb20s-true.jpg",
+      "publicId": "jepuru/vehiculos/new-hb20s-true",
+      "resourceType": "image",
+      "width": 1156,
+      "height": 800,
+      "format": "jpg",
+      "size": 184120
+    },
+    {
+      "originalPath": "public/images/vehiculos/soluto atras.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360724/jepuru/vehiculos/soluto%20atras.jpg",
+      "publicId": "jepuru/vehiculos/soluto atras",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 202073
+    },
+    {
+      "originalPath": "public/images/vehiculos/soluto.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360726/jepuru/vehiculos/soluto.jpg",
+      "publicId": "jepuru/vehiculos/soluto",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 182741
+    },
+    {
+      "originalPath": "public/images/vehiculos/solutoadentro.jpeg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360729/jepuru/vehiculos/solutoadentro.jpg",
+      "publicId": "jepuru/vehiculos/solutoadentro",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 111597
+    },
+    {
+      "originalPath": "public/images/vehiculos/tivoli.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360733/jepuru/vehiculos/tivoli.jpg",
+      "publicId": "jepuru/vehiculos/tivoli",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 222998
+    },
+    {
+      "originalPath": "public/images/vehiculos/tucson.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360736/jepuru/vehiculos/tucson.jpg",
+      "publicId": "jepuru/vehiculos/tucson",
+      "resourceType": "image",
+      "width": 1067,
+      "height": 800,
+      "format": "jpg",
+      "size": 148152
+    },
+    {
+      "originalPath": "public/images/Equipo/1.png",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360740/jepuru/equipo/1.jpg",
+      "publicId": "jepuru/equipo/1",
+      "resourceType": "image",
+      "width": 1200,
+      "height": 375,
+      "format": "jpg",
+      "size": 75810
+    },
+    {
+      "originalPath": "public/images/Equipo/IMG_6728-Mejorado-NR.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360743/jepuru/equipo/IMG_6728-Mejorado-NR.jpg",
+      "publicId": "jepuru/equipo/IMG_6728-Mejorado-NR",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 62385
+    },
+    {
+      "originalPath": "public/images/Equipo/chica1.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360747/jepuru/equipo/chica1.jpg",
+      "publicId": "jepuru/equipo/chica1",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 58507
+    },
+    {
+      "originalPath": "public/images/Equipo/chica2.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360752/jepuru/equipo/chica2.jpg",
+      "publicId": "jepuru/equipo/chica2",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 60584
+    },
+    {
+      "originalPath": "public/images/Equipo/chico1.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360756/jepuru/equipo/chico1.jpg",
+      "publicId": "jepuru/equipo/chico1",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 56938
+    },
+    {
+      "originalPath": "public/images/Equipo/chico2.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360760/jepuru/equipo/chico2.jpg",
+      "publicId": "jepuru/equipo/chico2",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 51000
+    },
+    {
+      "originalPath": "public/images/Equipo/chico3.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360763/jepuru/equipo/chico3.jpg",
+      "publicId": "jepuru/equipo/chico3",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 52883
+    },
+    {
+      "originalPath": "public/images/Equipo/equipo.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360768/jepuru/equipo/equipo.jpg",
+      "publicId": "jepuru/equipo/equipo",
+      "resourceType": "image",
+      "width": 1200,
+      "height": 800,
+      "format": "jpg",
+      "size": 188507
+    },
+    {
+      "originalPath": "public/images/Equipo/equipo1.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360773/jepuru/equipo/equipo1.jpg",
+      "publicId": "jepuru/equipo/equipo1",
+      "resourceType": "image",
+      "width": 1200,
+      "height": 800,
+      "format": "jpg",
+      "size": 186187
+    },
+    {
+      "originalPath": "public/images/Equipo/lavadero.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360777/jepuru/equipo/lavadero.jpg",
+      "publicId": "jepuru/equipo/lavadero",
+      "resourceType": "image",
+      "width": 1200,
+      "height": 800,
+      "format": "jpg",
+      "size": 195676
+    },
+    {
+      "originalPath": "public/images/Equipo/mara.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360781/jepuru/equipo/mara.jpg",
+      "publicId": "jepuru/equipo/mara",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 57589
+    },
+    {
+      "originalPath": "public/images/Equipo/marcelo.jpg",
+      "cloudinaryUrl": "https://res.cloudinary.com/doblti2c5/image/upload/v1753360786/jepuru/equipo/marcelo.jpg",
+      "publicId": "jepuru/equipo/marcelo",
+      "resourceType": "image",
+      "width": 533,
+      "height": 800,
+      "format": "jpg",
+      "size": 57927
+    }
+  ],
+  "failed": [
+    "public/videos/jepuru.mp4"
+  ],
+  "totalFiles": 44,
+  "totalSize": 6845695
+}

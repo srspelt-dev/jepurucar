@@ -1,7 +1,17 @@
+'use client'
+
 import { Requirements } from './components/requirements'
 import Link from 'next/link'
 import Image from 'next/image'
-import { VideoHero } from './components/video-hero'
+import { SmartVideoHero } from './components/smart-video-hero'
+
+// Función para obtener URL optimizada de Cloudinary
+const getOptimizedImageUrl = (imageName: string, width: number = 400) => {
+  if (imageName.includes('cloudinary.com')) {
+    return imageName.replace('/upload/', `/upload/w_${width},q_auto,f_auto/`);
+  }
+  return imageName;
+};
 
 export default function Home() {
   return (
@@ -9,8 +19,10 @@ export default function Home() {
       <div className="container mx-auto px-4 py-8 md:py-12">
         <div className="grid md:grid-cols-5 gap-4 items-center">
           {/* Video local - ocupa 2 columnas y se centra en móvil */}
-          <div className="md:col-span-2 aspect-[9/16] h-[400px] md:h-[600px] mx-auto w-full max-w-sm md:max-w-none">
-            <VideoHero />
+          <div className="md:col-span-2 relative mx-auto w-full max-w-sm md:max-w-none">
+            <div className="aspect-[9/16] h-[400px] md:h-[600px] w-full">
+              <SmartVideoHero />
+            </div>
           </div>
 
           {/* Contenido de texto - ocupa 3 columnas */}
@@ -57,11 +69,15 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/vehiculos/hb20.jpeg"
+                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360692/jepuru/vehiculos/hb20', 400)}
                 alt="Autos"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/vehiculos/hb20.jpeg';
+                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
@@ -84,11 +100,15 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/vehiculos/coolray.jpeg"
+                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360653/jepuru/vehiculos/coolray', 400)}
                 alt="Camionetas"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/vehiculos/coolray.jpeg';
+                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
@@ -111,11 +131,15 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/vehiculos/Carnival.jpg"
+                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360648/jepuru/vehiculos/Carnival', 400)}
                 alt="Van"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = '/images/vehiculos/Carnival.jpg';
+                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 

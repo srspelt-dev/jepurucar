@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-export function VideoHero() {
+export function SimpleVideoHero() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -15,9 +15,7 @@ export function VideoHero() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting && videoRef.current?.paused) {
-          // Solo intentamos reproducir si está pausado
           videoRef.current?.play().catch(() => {
-            // Si falla el autoplay, no hacemos nada
             console.log('Autoplay prevented')
           })
         } else if (!entry.isIntersecting && !videoRef.current?.paused) {
@@ -36,22 +34,15 @@ export function VideoHero() {
   }, [])
 
   return (
-    <div className="relative w-full h-full flex items-center justify-center bg-black rounded-xl overflow-hidden">
+    <div className="relative w-full h-full bg-black rounded-xl overflow-hidden flex items-center justify-center">
       <video
         ref={videoRef}
-        className="w-full h-full rounded-xl shadow-lg object-contain"
+        className="max-w-full max-h-full w-auto h-auto rounded-xl"
         autoPlay
         muted
         loop
-        controls
         playsInline
         poster="https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_720,q_auto,w_1280/v1753361556/jepuru/videos/jepuru"
-        style={{
-          maxWidth: '100%',
-          maxHeight: '100%',
-          width: 'auto',
-          height: 'auto'
-        }}
       >
         <source 
           src="https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_720,q_auto,w_1280/v1753361556/jepuru/videos/jepuru.mp4" 

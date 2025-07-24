@@ -4,11 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "dev:fast": "NEXT_TELEMETRY_DISABLED=1 next dev --turbopack --port 3000",
     "build": "next build",
+    "build:analyze": "ANALYZE=true next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "clean": "rm -rf .next && rm -rf node_modules/.cache",
+    "cleanup-images": "node scripts/cleanup-images.mjs",
+    "cleanup-images:preview": "echo '📋 Vista previa de archivos a eliminar:' && find public/images/vehiculos public/images/Equipo -type f 2>/dev/null | head -10 || echo 'Directorios ya limpiados'"
   },
   "dependencies": {
+    "cloudinary": "^2.7.0",
+    "dotenv": "^17.2.0",
     "embla-carousel-react": "^8.5.2",
     "lucide-react": "^0.471.1",
     "next": "15.1.4",

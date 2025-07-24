@@ -8,8 +8,35 @@ const nextConfig = {
       'lh3.googleusercontent.com',  // Para las fotos de perfil de Google
       'maps.googleapis.com',         // Para imágenes de Places API
       'cdn.cdnlogo.com',
-      'www.tiktok.com'
+      'www.tiktok.com',
+      'res.cloudinary.com'           // Para imágenes optimizadas de Cloudinary
     ],
+  },
+  // Optimizaciones para mejorar el rendimiento del filesystem
+  experimental: {
+    // Optimiza el manejo de archivos estáticos
+    optimizePackageImports: ['lucide-react', 'react-icons'],
+    // Mejora el rendimiento de la compilación
+    turbo: {
+      rules: {
+        '*.svg': {
+          loaders: ['@svgr/webpack'],
+          as: '*.js',
+        },
+      },
+    },
+  },
+  // Configuración de webpack para optimizar el build
+  webpack: (config, { dev, isServer }) => {
+    if (dev && !isServer) {
+      // Optimizaciones específicas para desarrollo
+      config.watchOptions = {
+        poll: 1000,
+        aggregateTimeout: 300,
+        ignored: ['**/node_modules', '**/.git', '**/.next'],
+      }
+    }
+    return config
   },
   // Agregar configuración de seguridad para TikTok
   async headers() {
