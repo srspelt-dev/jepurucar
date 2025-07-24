@@ -61,7 +61,7 @@ export function VideoHero() {
           src="https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_480,q_auto,w_854/v1753361556/jepuru/videos/jepuru.mp4" 
           type="video/mp4" 
         />
-        <source src="/videos/jepuru.mp4" type="video/mp4" />
+
         Tu navegador no soporta el elemento de video.
       </video>
     </div>

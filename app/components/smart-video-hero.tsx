@@ -146,8 +146,7 @@ export function SmartVideoHero() {
             type="video/mp4"
             media="(min-width: 769px)"
           />
-          {/* Fallback local */}
-          <source src="/videos/jepuru.mp4" type="video/mp4" />
+
           Tu navegador no soporta el elemento de video.
         </video>
 

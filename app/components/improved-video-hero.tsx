@@ -14,8 +14,7 @@ export function ImprovedVideoHero() {
   // URLs optimizadas de Cloudinary
   const videoSources = {
     hd: 'https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_720,q_auto,w_1280/v1753361556/jepuru/videos/jepuru.mp4',
-    sd: 'https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_480,q_auto,w_854/v1753361556/jepuru/videos/jepuru.mp4',
-    // fallback: '/videos/jepuru.mp4'
+    sd: 'https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_480,q_auto,w_854/v1753361556/jepuru/videos/jepuru.mp4'
   }
 
   const posterUrl = 'https://res.cloudinary.com/doblti2c5/video/upload/c_scale,h_720,q_auto,w_1280/v1753361556/jepuru/videos/jepuru'
@@ -127,7 +126,7 @@ export function ImprovedVideoHero() {
         >
           <source src={videoSources.hd} type="video/mp4" />
           <source src={videoSources.sd} type="video/mp4" />
-          <source src={videoSources.fallback} type="video/mp4" />
+
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
