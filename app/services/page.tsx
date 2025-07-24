@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { Car, Baby, Globe } from 'lucide-react'
 import { GoogleReviews } from '../components/google-reviews'
