@@ -27,9 +27,53 @@ yarn-error.log*
 # local env files
 .env*.local
 .env
+.env.production
+.env.development
+.env.staging
+
+# backup env files
+.env.local.backup
+.env.backup
 
 # vercel
 .vercel
+
+# deployment files with sensitive data
+.env.production.local
+.env.development.local
+.env.staging.local
+
+# API keys and secrets
+**/api-keys.json
+**/secrets.json
+config/production.json
+config/development.json
+config/local.json
+
+# cloudinary config files
+cloudinary.config.js
+cloudinary.config.ts
+cloudinary-secrets.json
+
+# google services
+google-services.json
+service-account-key.json
+firebase-config.json
+
+# deployment scripts with credentials
+deploy-*.sh
+deploy-*.js
+**/deploy-config.*
+
+# documentation with sensitive info
+PRODUCTION_CHECKLIST.md
+**/migration-report.json
+**/cleanup-report.json
+
+# temporary files with credentials
+temp-env.*
+*.env.temp
+credentials.txt
 
 # typescript
 *.tsbuildinfo
