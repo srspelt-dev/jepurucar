@@ -8,43 +8,7 @@ Tu aplicación está **99% lista para producción**. Solo necesitas configurar l
 - ✅ **Video arreglado** sin cortar cabezas
 - ✅ **Componentes optimizados** y responsive
 - ✅ **Código limpio** sin archivos innecesarios
-- ✅ **Performance mejorado** (62MB menos de archivos)
-
-## 🔧 **Variables de Entorno para Producción**
-
-### 1. Crear archivo `.env.production`
-```bash
-# === CONFIGURACIÓN DE PRODUCCIÓN ===
-
-# Google Places API
-NEXT_PUBLIC_GOOGLE_PLACES_API_KEY=AIzaSyAi93Or1u3Pk753jx5TuiURPCK_5BHYMkA
-
-# Cloudinary (CRÍTICO - sin esto las imágenes no cargan)
-CLOUDINARY_CLOUD_NAME=doblti2c5
-CLOUDINARY_API_KEY=726789867682892
-CLOUDINARY_API_SECRET=r62VFE2VOCGP2tsmCz2SqsiNjE0
-
-# Configuración del sitio
-NEXT_PUBLIC_SITE_URL=https://www.jepurucar.com.py
-NODE_ENV=production
-
-# Optimizaciones de rendimiento
-NEXT_TELEMETRY_DISABLED=1
-```
-
-### 2. Variables de entorno del hosting
-Si usas **Vercel, Netlify, o similar**, agregar estas variables:
-
-**En el panel de tu hosting:**
-```
-NEXT_PUBLIC_GOOGLE_PLACES_API_KEY = AIzaSyAi93Or1u3Pk753jx5TuiURPCK_5BHYMkA
-CLOUDINARY_CLOUD_NAME = doblti2c5
-CLOUDINARY_API_KEY = 726789867682892
-CLOUDINARY_API_SECRET = r62VFE2VOCGP2tsmCz2SqsiNjE0
-NEXT_PUBLIC_SITE_URL = https://www.jepurucar.com.py
-NODE_ENV = production
-NEXT_TELEMETRY_DISABLED = 1
-```
+- ✅ **Performance mejorado** (62MB menos de archivo
 
 ## 🛠️ **Comandos para Build de Producción**
 
