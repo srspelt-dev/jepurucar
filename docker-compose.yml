@@ -1,0 +1,28 @@
+# Docker Compose version (obsolete, removed)
+
+services:
+  jepuru-car:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jepuru-car
+    ports:
+      - "${NEXT_PUBLIC_PORT:-3000}:3000"
+    environment:
+      - NODE_ENV=production
+      - CLOUDINARY_CLOUD_NAME=${CLOUDINARY_CLOUD_NAME}
+      - CLOUDINARY_API_KEY=${CLOUDINARY_API_KEY}
+      - CLOUDINARY_API_SECRET=${CLOUDINARY_API_SECRET}
+      - NEXT_PUBLIC_GOOGLE_PLACES_API_KEY=${NEXT_PUBLIC_GOOGLE_PLACES_API_KEY}
+    networks:
+      - jepuru-network
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      # Optional: Mount for development logs
+      - ./logs:/app/logs
+
+networks:
+  jepuru-network:
+    driver: bridge
