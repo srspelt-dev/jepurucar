@@ -34,10 +34,10 @@ RUN chown -R nextjs:nodejs /app
 USER nextjs
 
 # Expose the port
-EXPOSE 3000
+EXPOSE 3010
 
 # Set environment variable
-ENV PORT=3000
+ENV PORT=3010
 ENV HOSTNAME="0.0.0.0"
 ENV NODE_ENV=production
 
