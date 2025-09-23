@@ -7,7 +7,7 @@ const phoneNumbers = [
   '+595961590627'
   // '+595974302500',
   // '+595971951077',
-  // '+595983214111'
+  '+595961590627'
 ]
 
 const mensaje = encodeURIComponent('Hola Jepuru Car, estoy en la página web y quiero cotización')
