@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { BsWhatsapp } from 'react-icons/bs'
 
 const phoneNumbers = [
-  '+595961590627',
+  '+595961590627'
   // '+595974302500',
   // '+595971951077',
   // '+595983214111'
