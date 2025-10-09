@@ -5,14 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { SmartVideoHero } from './components/smart-video-hero'
 
-// Función para obtener URL optimizada de Cloudinary
-const getOptimizedImageUrl = (imageName: string, width: number = 400) => {
-  if (imageName.includes('cloudinary.com')) {
-    return imageName.replace('/upload/', `/upload/w_${width},q_auto,f_auto/`);
-  }
-  return imageName;
-};
-
 export default function Home() {
   return (
     <div>
@@ -69,15 +61,11 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360692/jepuru/vehiculos/hb20', 400)}
+                src="/images/autos_jepuru/hb20Hatch.jpeg"
                 alt="Autos"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/images/vehiculos/hb20.jpeg';
-                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
@@ -100,15 +88,11 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360653/jepuru/vehiculos/coolray', 400)}
+                src="/images/autos_jepuru/KGMtivoli.jpg"
                 alt="Camionetas"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/images/vehiculos/coolray.jpeg';
-                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
@@ -131,15 +115,11 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360648/jepuru/vehiculos/Carnival', 400)}
+                src="/images/autos_jepuru/carnival.jpg"
                 alt="Van"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/images/vehiculos/Carnival.jpg';
-                }}
               />
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 

@@ -1,15 +1,6 @@
 'use client'
 
-import Image from 'next/image'
-
-// Función para obtener URL optimizada de Cloudinary
-const getOptimizedImageUrl = (imageName: string, width: number = 800) => {
-  if (imageName.includes('cloudinary.com')) {
-    return imageName.replace('/upload/', `/upload/w_${width},q_auto,f_auto/`);
-  }
-  return imageName;
-};
-import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin} from 'lucide-react'
+import { Heart, Target, Phone, Mail, Clock, Facebook, Instagram, Twitter, Linkedin, Users, Award, Shield } from 'lucide-react'
 
 export default function About() {
   return (
@@ -79,7 +70,7 @@ export default function About() {
         </div>
       </section>
 
-      {/* Fotos Grupales */}
+      {/* Nuestro Equipo */}
       <section className="space-y-12">
         <h2 className="text-3xl font-bold text-center mb-8">Nuestro Gran Equipo</h2>
         
@@ -87,15 +78,10 @@ export default function About() {
           {/* Foto Grupal Funcionarios */}
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360773/jepuru/equipo/equipo1', 800)}
+              <img
+                src="/images/Equipo/equipo1.jpg"
                 alt="Equipo de Funcionarios Jepuru"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/images/Equipo/equipo1.jpg';
-                }}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold text-center">
@@ -106,20 +92,63 @@ export default function About() {
           {/* Foto Grupal Lavadero */}
           <div className="space-y-4">
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-lg">
-              <Image
-                src={getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360777/jepuru/equipo/lavadero', 800)}
+              <img
+                src="/images/Equipo/lavadero.jpg"
                 alt="Equipo de Lavadero"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = '/images/Equipo/lavadero.jpg';
-                }}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
             <h3 className="text-xl font-semibold text-center">
               Equipo de Lavadero
             </h3>
+          </div>
+        </div>
+
+        {/* Valores del Equipo */}
+        <div className="grid md:grid-cols-3 gap-8 mt-12">
+          {/* Equipo Profesional */}
+          <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="flex justify-center mb-6">
+              <div className="bg-orange-500 p-6 rounded-full">
+                <Users className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-4">
+              Equipo Profesional
+            </h3>
+            <p className="text-gray-600 text-center">
+              Personal capacitado y comprometido con brindarte el mejor servicio de alquiler de vehículos.
+            </p>
+          </div>
+
+          {/* Calidad Garantizada */}
+          <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="flex justify-center mb-6">
+              <div className="bg-orange-500 p-6 rounded-full">
+                <Award className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-4">
+              Calidad Garantizada
+            </h3>
+            <p className="text-gray-600 text-center">
+              Vehículos en excelente estado, mantenidos y limpiados profesionalmente para tu comodidad.
+            </p>
+          </div>
+
+          {/* Confianza y Seguridad */}
+          <div className="bg-gradient-to-br from-orange-50 to-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+            <div className="flex justify-center mb-6">
+              <div className="bg-orange-500 p-6 rounded-full">
+                <Shield className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            <h3 className="text-xl font-semibold text-center mb-4">
+              Confianza y Seguridad
+            </h3>
+            <p className="text-gray-600 text-center">
+              Tu seguridad es nuestra prioridad. Todos nuestros vehículos cuentan con seguro completo.
+            </p>
           </div>
         </div>
       </section>

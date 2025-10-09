@@ -128,23 +128,17 @@ export function SmartVideoHero() {
           onLoadedData={handleVideoLoad}
           onError={handleVideoError}
           onClick={handleVideoClick}
-          poster="https://res.cloudinary.com/doblti2c5/video/upload/w_400,q_auto,f_auto/v1753361556/jepuru/videos/jepuru.jpg"
+          poster="/images/jepurucar.png"
           style={{
             objectFit: 'contain',
             objectPosition: 'center center'
           }}
         >
           {/* Video original con dimensiones proporcionales - mantiene el logo */}
+          {/* Si tienes el video localmente, colócalo en /public/videos/jepuru.mp4 */}
           <source 
-            src="https://res.cloudinary.com/doblti2c5/video/upload/w_400,q_auto,f_auto/v1753361556/jepuru/videos/jepuru.mp4" 
+            src="/videos/jepuru.mp4" 
             type="video/mp4"
-            media="(max-width: 768px)"
-          />
-          {/* Versión HD para desktop - respeta proporciones originales */}
-          <source 
-            src="https://res.cloudinary.com/doblti2c5/video/upload/w_600,q_auto,f_auto/v1753361556/jepuru/videos/jepuru.mp4" 
-            type="video/mp4"
-            media="(min-width: 769px)"
           />
 
           Tu navegador no soporta el elemento de video.

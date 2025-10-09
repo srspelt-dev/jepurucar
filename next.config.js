@@ -11,8 +11,7 @@ const nextConfig = {
       'lh3.googleusercontent.com',  // Para las fotos de perfil de Google
       'maps.googleapis.com',         // Para imágenes de Places API
       'cdn.cdnlogo.com',
-      'www.tiktok.com',
-      'res.cloudinary.com'           // Para imágenes optimizadas de Cloudinary
+      'www.tiktok.com'
     ],
   },
   // Optimizaciones para mejorar el rendimiento del filesystem

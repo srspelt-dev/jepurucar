@@ -5,14 +5,6 @@ import { useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 
-// Función para obtener URL optimizada de Cloudinary
-const getOptimizedImageUrl = (imageName: string, width: number = 600) => {
-  if (imageName.includes('cloudinary.com')) {
-    return imageName.replace('/upload/', `/upload/w_${width},q_auto,f_auto/`);
-  }
-  return imageName;
-};
-
 const phoneNumbers = [
   "+595961590627", // Mara
   "+595974302500", // Marcelo
@@ -30,8 +22,7 @@ const vehicles = [
       'Línea económica',
       'Manual y automática'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360710/jepuru/vehiculos/i10', 600),
-    fallbackImage: '/images/vehiculos/i10.jpg'
+    image: '/images/autos_jepuru/i10.jpg'
   },
   { 
     id: 2, 
@@ -42,8 +33,7 @@ const vehicles = [
       'Línea económica',
       'Automática'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360675/jepuru/vehiculos/grand-i10', 600),
-    fallbackImage: '/images/vehiculos/grand-i10.jpg'
+    image: '/images/autos_jepuru/grandi10Hatch.jpg'
   },
   { 
     id: 3, 
@@ -55,8 +45,7 @@ const vehicles = [
       'Línea intermedia',
       'Bluetooth, USB, Apple CAR y Android Auto'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360686/jepuru/vehiculos/hb20-hatch', 600),
-    fallbackImage: '/images/vehiculos/hb20-hatch.jpg'
+    image: '/images/autos_jepuru/hb20Hatch.jpeg'
   },
   { 
     id: 4, 
@@ -68,8 +57,7 @@ const vehicles = [
       'Línea intermedia',
       'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360689/jepuru/vehiculos/hb20-new-hatch', 600),
-    fallbackImage: '/images/vehiculos/hb20-new-hatch.jpg'
+    image: '/images/autos_jepuru/newHb20.jpeg'
   },
   { 
     id: 5, 
@@ -80,8 +68,7 @@ const vehicles = [
       'Potente y económico',
       'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360718/jepuru/vehiculos/new-grand-i10', 600),
-    fallbackImage: '/images/vehiculos/new-grand-i10.jpeg'
+    image: '/images/autos_jepuru/NewGrandi10.jpeg'
   },
   { 
     id: 6, 
@@ -92,8 +79,7 @@ const vehicles = [
       'Eficiente consumo',
       'Bluetooth, USB, Apple CAR y Android Auto'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360665/jepuru/vehiculos/etios', 600),
-    fallbackImage: '/images/vehiculos/etios.jpeg'
+    image: '/images/autos_jepuru/etios.jpeg'
   },
   { 
     id: 7, 
@@ -104,8 +90,7 @@ const vehicles = [
       'Potente',
       'Bluetooth, USB'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360667/jepuru/vehiculos/gol', 600),
-    fallbackImage: '/images/vehiculos/gol.jpeg'
+    image: '/images/autos_jepuru/gol.png'
   },
 
   // Grupo Sedan
@@ -119,8 +104,7 @@ const vehicles = [
       'Automática',
       'Ideal para viajes largos'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360721/jepuru/vehiculos/new-hb20s-true', 600),
-    fallbackImage: '/images/vehiculos/new-hb20s-true.jpeg'
+    image: '/images/autos_jepuru/hb20s.jpeg'
   },
   { 
     id: 9, 
@@ -131,8 +115,7 @@ const vehicles = [
       'Ideal para uso urbano',
       'Perfecto para viajes'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360726/jepuru/vehiculos/soluto', 600),
-    fallbackImage: '/images/vehiculos/soluto.jpeg'
+    image: '/images/autos_jepuru/soluto.jpeg'
   },
 
   // Grupo SUV
@@ -145,8 +128,7 @@ const vehicles = [
       '5 pasajeros',
       'Automático'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360707/jepuru/vehiculos/hb20x', 600),
-    fallbackImage: '/images/vehiculos/hb20x.jpeg'
+    image: '/images/autos_jepuru/hb20x.jpeg'
   },
   { 
     id: 11, 
@@ -157,8 +139,7 @@ const vehicles = [
       '5 pasajeros',
       'Automático'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360678/jepuru/vehiculos/gx3', 600),
-    fallbackImage: '/images/vehiculos/gx3.jpeg'
+    image: '/images/autos_jepuru/gx3pro.jpeg'
   },
   { 
     id: 12, 
@@ -171,8 +152,7 @@ const vehicles = [
       '5 pasajeros',
       'Automático'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360733/jepuru/vehiculos/tivoli', 600),
-    fallbackImage: '/images/vehiculos/tivoli.jpg'
+    image: '/images/autos_jepuru/KGMtivoli.jpg'
   },
   { 
     id: 13, 
@@ -184,8 +164,7 @@ const vehicles = [
       'Automática',
       'Baulera amplia'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360653/jepuru/vehiculos/coolray', 600),
-    fallbackImage: '/images/vehiculos/coolray.jpeg'
+    image: '/images/autos_jepuru/coolray.jpeg'
   },
   { 
     id: 14, 
@@ -197,8 +176,7 @@ const vehicles = [
       'Automática',
       'Amplia baulera'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360736/jepuru/vehiculos/tucson', 600),
-    fallbackImage: '/images/vehiculos/tucson.jpg'
+    image: '/images/autos_jepuru/AllNewTucson.jpg'
   },
   { 
     id: 15, 
@@ -210,8 +188,7 @@ const vehicles = [
       'Turbo',
       'Automática'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360713/jepuru/vehiculos/jim', 600),
-    fallbackImage: '/images/vehiculos/jim.jpeg'
+    image: '/images/autos_jepuru/jim.jpeg'
   },
 
   // Grupo VAN
@@ -224,8 +201,7 @@ const vehicles = [
       'Automática',
       'Turbo'
     ], 
-    image: getOptimizedImageUrl('https://res.cloudinary.com/doblti2c5/image/upload/v1753360648/jepuru/vehiculos/Carnival', 600),
-    fallbackImage: '/images/vehiculos/Carnival.jpg'
+    image: '/images/autos_jepuru/carnival.jpg'
   }
 ]
 
@@ -318,12 +294,6 @@ function VehiclesContent() {
                 alt={vehicle.name}
                 fill
                 className="object-cover transition-transform duration-500 hover:scale-110"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  if (target.src !== vehicle.fallbackImage) {
-                    target.src = vehicle.fallbackImage;
-                  }
-                }}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
               />
               <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm

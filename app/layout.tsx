@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Jepuru Car - Alquiler de Vehículos en Paraguay',
     description: 'La mejor opción en alquiler de vehículos en Paraguay. Flota moderna y servicio personalizado.',
-    images: ['https://res.cloudinary.com/doblti2c5/image/upload/w_1200,h_630,c_fit,q_auto,f_auto/v1753395929/jepuru/brand/logo.png'],
+    images: ['/images/jepurucar.png'],
     locale: 'es_PY',
     type: 'website',
   },
