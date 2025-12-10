@@ -2,11 +2,21 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+# Configure npm for better network reliability
+RUN npm config set fetch-retries 5 && \
+    npm config set fetch-retry-mintimeout 20000 && \
+    npm config set fetch-retry-maxtimeout 120000 && \
+    npm config set fetch-timeout 600000 && \
+    npm config set maxsockets 5
+
 # Copy package files first for better caching
 COPY package*.json ./
 
 # Install dependencies with npm ci for faster, more reliable builds
-RUN npm ci --legacy-peer-deps --no-audit --progress=true
+# Using retry logic to handle network issues in production
+RUN npm ci --legacy-peer-deps --no-audit --progress=true || \
+    (sleep 10 && npm ci --legacy-peer-deps --no-audit --progress=true) || \
+    (sleep 20 && npm ci --legacy-peer-deps --no-audit --progress=true)
 
 # Copy source code
 COPY . .
