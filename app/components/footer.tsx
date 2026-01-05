@@ -98,7 +98,7 @@ export function Footer() {
                 <div>
                   <p className="font-medium">Calle Fortín Galpón casi 8 de Septiembre</p>
                   <p className="text-orange-100">Barrio Santa María, Asunción</p>
-                  <p className="text-orange-100">A 3 cuadras de Santa Teresa, a 50 metros de Madame Linch</p>
+                  <p className="text-orange-100">A 3 cuadras de Santa Teresa, a 50 metros de Madame Lynch</p>
                   <Link 
                     href="https://maps.google.com/?q=-25.299740999999997,-57.551235999999996"
                     target="_blank"

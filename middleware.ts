@@ -6,7 +6,8 @@ const rateLimitMap = new Map<string, { count: number; resetTime: number }>()
 // Configuración de rate limiting
 const RATE_LIMIT_WINDOW = 60 * 1000 // 1 minuto
 const RATE_LIMIT_MAX_REQUESTS = 100 // Máximo de requests por minuto por IP
-const RATE_LIMIT_API_MAX = 20 // Máximo de requests por minuto para APIs
+const RATE_LIMIT_API_MAX = 60 // Máximo de requests por minuto para APIs
+const RATE_LIMIT_API_GOOGLE_REVIEWS_MAX = 120 // Máximo de requests por minuto para Google Reviews
 
 // Limpiar entradas antiguas cada 5 minutos
 setInterval(() => {
@@ -20,11 +21,19 @@ setInterval(() => {
 
 function getRateLimitKey(request: NextRequest): string {
   // Usar IP del cliente o X-Forwarded-For si está detrás de un proxy
+  const cfConnectingIp = request.headers.get('cf-connecting-ip')
+  if (cfConnectingIp) return cfConnectingIp
+
   const forwarded = request.headers.get('x-forwarded-for')
-  const ip = forwarded ? forwarded.split(',')[0].trim() : 
-             request.headers.get('x-real-ip') || 
-             'unknown'
-  return ip
+  if (forwarded) {
+    const ip = forwarded.split(',')[0]?.trim()
+    if (ip) return ip
+  }
+
+  const realIp = request.headers.get('x-real-ip')
+  if (realIp) return realIp
+
+  return request.ip ?? 'unknown'
 }
 
 function checkRateLimit(key: string, maxRequests: number): boolean {
@@ -59,14 +68,17 @@ export function middleware(request: NextRequest) {
 
   // Rate limiting más estricto para APIs
   if (pathname.startsWith('/api/')) {
-    if (!checkRateLimit(rateLimitKey, RATE_LIMIT_API_MAX)) {
+    const apiMaxRequests = pathname.startsWith('/api/google-reviews')
+      ? RATE_LIMIT_API_GOOGLE_REVIEWS_MAX
+      : RATE_LIMIT_API_MAX
+    if (!checkRateLimit(rateLimitKey, apiMaxRequests)) {
       return NextResponse.json(
         { error: 'Demasiadas solicitudes. Por favor, intenta más tarde.' },
         { 
           status: 429,
           headers: {
             'Retry-After': '60',
-            'X-RateLimit-Limit': String(RATE_LIMIT_API_MAX),
+            'X-RateLimit-Limit': String(apiMaxRequests),
             'X-RateLimit-Remaining': '0',
           }
         }
@@ -113,13 +125,11 @@ export function middleware(request: NextRequest) {
   // Rate limit headers informativos
   const record = rateLimitMap.get(rateLimitKey)
   if (record) {
-    const remaining = pathname.startsWith('/api/') 
-      ? Math.max(0, RATE_LIMIT_API_MAX - record.count)
-      : Math.max(0, RATE_LIMIT_MAX_REQUESTS - record.count)
-    
-    response.headers.set('X-RateLimit-Limit', 
-      pathname.startsWith('/api/') ? String(RATE_LIMIT_API_MAX) : String(RATE_LIMIT_MAX_REQUESTS)
-    )
+    const maxRequests = pathname.startsWith('/api/')
+      ? (pathname.startsWith('/api/google-reviews') ? RATE_LIMIT_API_GOOGLE_REVIEWS_MAX : RATE_LIMIT_API_MAX)
+      : RATE_LIMIT_MAX_REQUESTS
+    const remaining = Math.max(0, maxRequests - record.count)
+    response.headers.set('X-RateLimit-Limit', String(maxRequests))
     response.headers.set('X-RateLimit-Remaining', String(remaining))
     response.headers.set('X-RateLimit-Reset', String(Math.ceil(record.resetTime / 1000)))
   }
