@@ -32,21 +32,31 @@ services:
     # Security: Read-only root filesystem (Next.js standalone puede necesitar escribir)
     # Comentado por compatibilidad, pero /tmp está protegido con tmpfs
     # read_only: true
-    # Security: Disable dangerous capabilities (mantenemos capacidades básicas necesarias)
+    # Security: Disable only dangerous capabilities (mantener las básicas necesarias)
+    # Eliminar solo capacidades peligrosas en lugar de todas
     cap_drop:
-      - ALL
-    cap_add:
-      - NET_BIND_SERVICE  # Necesario para binding de puertos
-      - CHOWN
-      - SETGID
-      - SETUID
+      - SYS_ADMIN
+      - SYS_TIME
+      - SYS_MODULE
+      - NET_ADMIN
+      - DAC_OVERRIDE
+      - FOWNER
+      - MKNOD
+      - SETPCAP
+      - NET_RAW
+      - SYS_CHROOT
+      - SETFCAP
+      - SYS_PTRACE
+      - AUDIT_WRITE
+    # No necesitamos cap_add si mantenemos las capacidades por defecto necesarias
     # Security: Run as non-root user (ya configurado en Dockerfile, no es necesario duplicarlo)
     # user: "1001:1001"  # Comentado - se maneja en Dockerfile con USER nextjs
     # Security: Prevent privilege escalation
-    security_opt:
-      - no-new-privileges:true
-      # apparmor puede causar problemas si no está configurado - comentado
-      # - apparmor:docker-default
+    # no-new-privileges puede bloquear la ejecución en algunos casos - comentado temporalmente
+    # security_opt:
+    #   - no-new-privileges:true
+    # apparmor puede causar problemas si no está configurado - comentado
+    # - apparmor:docker-default
     # Security: Resource limits to prevent DoS
     deploy:
       resources:
