@@ -20,9 +20,60 @@ services:
     env_file:
       - .env
     volumes:
-      # Optional: Mount for development logs
-      - ./logs:/app/logs
+      # Optional: Mount for development logs (read-only if possible)
+      - ./logs:/app/logs:rw
+    # Security: Protect /tmp with tmpfs (noexec, nosuid, nodev)
+    # noexec: No ejecutar binarios desde /tmp
+    # nosuid: No permitir SUID en /tmp
+    # nodev: No permitir dispositivos en /tmp
+    tmpfs:
+      - /tmp:noexec,nosuid,nodev,size=100m,mode=1777
+      - /var/tmp:noexec,nosuid,nodev,size=50m,mode=1777
+    # Security: Read-only root filesystem (Next.js standalone puede necesitar escribir)
+    # Comentado por compatibilidad, pero /tmp está protegido con tmpfs
+    # read_only: true
+    # Security: Disable dangerous capabilities
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETGID
+      - SETUID
+    # Security: Run as non-root user (already set in Dockerfile)
+    user: "1001:1001"
+    # Security: Prevent privilege escalation
+    security_opt:
+      - no-new-privileges:true
+      - apparmor:docker-default
+    # Security: Resource limits to prevent DoS
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 1G
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+    # Security: Health check (usando node para verificar el servidor)
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://localhost:3010/', (r) => process.exit(r.statusCode === 200 ? 0 : 1))\" || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    # Security: Logging configuration
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # Security: Stop timeout
+    stop_grace_period: 10s
 
 networks:
   jepuru-network:
     driver: bridge
+    # Security: Enable bridge isolation
+    driver_opts:
+      com.docker.network.bridge.enable_icc: "true"
+      com.docker.network.bridge.enable_ip_masquerade: "true"

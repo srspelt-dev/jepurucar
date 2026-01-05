@@ -7,28 +7,33 @@ const nextConfig = {
     NEXT_PUBLIC_GOOGLE_PLACES_API_KEY: process.env.NEXT_PUBLIC_GOOGLE_PLACES_API_KEY,
   },
   images: {
-    domains: [
-      'lh3.googleusercontent.com',  // Para las fotos de perfil de Google
-      'maps.googleapis.com',         // Para imágenes de Places API
-      'cdn.cdnlogo.com',
-      'www.tiktok.com'
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',  // Para las fotos de perfil de Google
+      },
+      {
+        protocol: 'https',
+        hostname: 'maps.googleapis.com',         // Para imágenes de Places API
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.cdnlogo.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.tiktok.com',
+      },
     ],
   },
   // Optimizaciones para mejorar el rendimiento del filesystem
   experimental: {
     // Optimiza el manejo de archivos estáticos
     optimizePackageImports: ['lucide-react', 'react-icons'],
-    // Mejora el rendimiento de la compilación
-    turbo: {
-      rules: {
-        '*.svg': {
-          loaders: ['@svgr/webpack'],
-          as: '*.js',
-        },
-      },
-    },
   },
-  // Configuración de webpack para optimizar el build
+  // Configuración de Turbopack (requerido en Next.js 16)
+  turbopack: {},
+  // Configuración de webpack para optimizar el build (solo cuando se use explícitamente con --webpack)
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
       // Optimizaciones específicas para desarrollo
@@ -40,15 +45,35 @@ const nextConfig = {
     }
     return config
   },
-  // Agregar configuración de seguridad para TikTok
+  // Headers de seguridad adicionales
   async headers() {
     return [
       {
         source: '/:path*',
         headers: [
           {
-            key: 'Content-Security-Policy',
-            value: "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.tiktok.com https://*.tiktok.com",
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
+          },
+          {
+            key: 'X-Frame-Options',
+            value: 'DENY',
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()',
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=31536000; includeSubDomains; preload',
           },
         ],
       },

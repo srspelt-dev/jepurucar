@@ -9,6 +9,7 @@ import Script from 'next/script'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.jepurucar.com.py'),
   title: 'Jepuru Car - Alquiler de Vehículos en Paraguay | Rent a Car',
   description: 'Alquiler de vehículos en Paraguay. Servicio de rent a car con la mejor flota de autos, SUVs y vans. Precios competitivos y atención personalizada en Asunción.',
   keywords: 'alquiler de autos paraguay, rent a car paraguay, alquiler de vehículos asunción, jepuru car, alquiler de coches paraguay, rental car asunción, alquiler de SUV paraguay, alquiler de van paraguay',

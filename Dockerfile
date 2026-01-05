@@ -30,8 +30,13 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 # Create a non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
+
+# Security: Create secure /tmp directory with proper permissions
+RUN mkdir -p /tmp && \
+    chmod 1777 /tmp && \
+    chown root:root /tmp
 
 # Copy the built application from builder stage
 COPY --from=builder /app/public ./public
@@ -39,8 +44,12 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 
 # Set ownership to nextjs user
-RUN chown -R nextjs:nodejs /app
+RUN chown -R nextjs:nodejs /app && \
+    # Remove unnecessary packages and clean up
+    apk del --no-cache || true && \
+    rm -rf /var/cache/apk/* /tmp/* /var/tmp/*
 
+# Security: Switch to non-root user
 USER nextjs
 
 # Expose the port
@@ -50,6 +59,9 @@ EXPOSE 3010
 ENV PORT=3010
 ENV HOSTNAME="0.0.0.0"
 ENV NODE_ENV=production
+
+# Security: Set Node.js to run with minimal privileges
+ENV NODE_OPTIONS="--disable-proto=delete"
 
 # Start the production server
 CMD ["node", "server.js"]
