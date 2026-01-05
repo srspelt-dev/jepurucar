@@ -52,6 +52,11 @@ export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
   const rateLimitKey = getRateLimitKey(request)
 
+  // Block server action probes; remove this guard if you add Server Actions.
+  if (request.headers.get('next-action')) {
+    return new NextResponse('Not Found', { status: 404 })
+  }
+
   // Rate limiting más estricto para APIs
   if (pathname.startsWith('/api/')) {
     if (!checkRateLimit(rateLimitKey, RATE_LIMIT_API_MAX)) {
@@ -135,4 +140,3 @@ export const config = {
     '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
   ],
 }
-
