@@ -46,15 +46,14 @@ COPY --from=builder /app/.next/static ./.next/static
 
 # Set ownership and permissions to nextjs user
 # IMPORTANTE: Hacer chown ANTES de cambiar de usuario para mantener permisos
-RUN chown -R nextjs:nodejs /app && \
+RUN set -eux; \
+    chown -R nextjs:nodejs /app; \
     # Asegurar que el directorio de node tiene permisos correctos para lectura/ejecución
-    chmod -R a+rX /usr/local/bin 2>/dev/null || true && \
+    chmod -R a+rX /usr/local/bin 2>/dev/null || true; \
     # Asegurar que node tenga permisos de ejecución para todos
-    chmod +x /usr/local/bin/node 2>/dev/null || true && \
+    chmod +x /usr/local/bin/node 2>/dev/null || true; \
     # Verificar que node existe y es ejecutable
-    test -x /usr/local/bin/node && echo "Node executable confirmed" || echo "Warning: Node check failed" && \
-    # Remove unnecessary packages and clean up
-    apk del --no-cache 2>/dev/null || true && \
+    if [ -x /usr/local/bin/node ]; then echo "Node executable confirmed"; else echo "Warning: Node check failed"; fi; \
     rm -rf /var/cache/apk/* /tmp/* /var/tmp/* 2>/dev/null || true
 
 # Security: Switch to non-root user
