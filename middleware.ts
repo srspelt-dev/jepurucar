@@ -119,7 +119,7 @@ export function middleware(request: NextRequest) {
     "img-src 'self' data: https:; " +
     "font-src 'self' data:; " +
     "connect-src 'self' https://maps.googleapis.com https://*.googleapis.com; " +
-    "frame-src 'self' https://www.tiktok.com https://*.tiktok.com https://www.google.com;"
+    "frame-src 'self' https://www.tiktok.com https://*.tiktok.com https://www.google.com; https://*.instagram.com"
   )
 
   // Rate limit headers informativos
