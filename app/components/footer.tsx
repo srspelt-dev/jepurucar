@@ -141,7 +141,7 @@ export function Footer() {
                              reservas@jepurucar.com.py
                            </a>
             </p>
-            <p>&copy; {new Date().getFullYear()} Jepuru Car. Todos los derechos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Jepuru Car. Developed by ATP Software. Todos los derechos reservados.</p>
           </div>
         </div>
       </div>
