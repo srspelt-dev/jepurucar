@@ -5,45 +5,45 @@ import { Car } from 'lucide-react'
 
 const vehicles = [
   {
-    name: 'ALL NEW TUCSON',
+    name: 'Hyundai Tucson',
     brand: 'Hyundai',
-    description: 'Conduce una SUV que fusiona alta tecnología con estilo para asegurarte la mejor experiencia en el camino, sin dejar de lado tu seguridad y la de tus acompañantes.',
-    image: '/images/autos_jepuru/AllNewTucson.jpg'
+    description: 'SUV amplia con tecnología y seguridad para viajes cómodos.',
+    image: '/images/autos_jepuru_nuevo/Hyundai Tucson.JPG'
   },
   {
-    name: 'HB20 Hatchback',
-    description: 'Un hatchback moderno, versátil y con tecnología de punta. Potencia y eficiencia en consumo. Admite conexiones Bluetooth, USB.',
-    image: '/images/autos_jepuru/hb20Hatch.jpeg'
+    name: 'Hyundai New HB20',
+    description: 'Hatchback moderno con conectividad Apple Car y Android Auto.',
+    image: '/images/autos_jepuru_nuevo/HYUNDAI NEW HB20 HATCHBACK-1.png'
   },
   {
-    name: 'HB20S',
-    description: 'Sedán compacto con diseño deportivo, tecnología avanzada y excelente rendimiento de combustible.',
-    image: '/images/autos_jepuru/hb20s.jpeg'
-  },
-  {
-    name: 'Grand i10 hatchback',
-    description: 'Modelo que destaca por su consumo equilibrado de combustible en ciudad y carretera. Compacto de línea económica y básica.',
-    image: '/images/autos_jepuru/grandi10Hatch.jpg'
+    name: 'Hyundai HB20S',
+    description: 'Sedán con amplia baulera y rendimiento eficiente para viajes largos.',
+    image: '/images/autos_jepuru_nuevo/HB20 Sedan.JPG'
   },
   {
     name: 'New Grand i10 hatchback',
-    description: 'El nuevo Grand i10 hatchback es una combinación irresistible de tecnología de vanguardia, rendimiento elegante y seguridad.',
-    image: '/images/autos_jepuru/NewGrandi10.jpeg'
+    description: 'Compacto renovado, eficiente y con conectividad completa.',
+    image: '/images/autos_jepuru_nuevo/NEW GRAND i10-1.png'
   },
   {
-    name: 'i10',
-    description: 'Compacto, bajo consumo, línea económica estándar. Vehículo ideal para uso en ciudad.',
-    image: '/images/autos_jepuru/i10.jpg'
+    name: 'Hyundai i10',
+    description: 'Ciudadano ágil y económico con opciones manual y automática.',
+    image: '/images/autos_jepuru_nuevo/i10-1.png'
   },
   {
-    name: 'KGM Tivoli',
-    description: 'SUV compacta con diseño moderno, espacioso interior y tecnología de última generación.',
-    image: '/images/autos_jepuru/KGMtivoli.jpg'
+    name: 'Geely GX3',
+    description: 'Mini SUV moderna, ideal para ciudad con estilo y comodidad.',
+    image: '/images/autos_jepuru_nuevo/Geely GX3.JPG'
   },
   {
-    name: 'Kia Carnival',
-    description: 'Van espaciosa ideal para familias y grupos. Máximo confort y tecnología.',
-    image: '/images/autos_jepuru/carnival.jpg'
+    name: 'Toyota Raize',
+    description: 'SUV compacta con motor eficiente y conectividad completa.',
+    image: '/images/autos_jepuru_nuevo/RAIZE-1.png'
+  },
+  {
+    name: 'Suzuki XL7',
+    description: 'SUV con 3 filas, espacio para 7 pasajeros y gran confort.',
+    image: '/images/autos_jepuru_nuevo/XL7-1.png'
   }
 ]
 

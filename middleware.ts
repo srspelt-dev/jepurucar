@@ -106,20 +106,21 @@ export function middleware(request: NextRequest) {
   
   // Security headers
   response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('X-Frame-Options', 'DENY')
+  response.headers.set('X-Frame-Options', 'SAMEORIGIN')
   response.headers.set('X-XSS-Protection', '1; mode=block')
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
   response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
   
-  // Prevenir clickjacking
+  // Content Security Policy - incluir Rentsyst en frame-src
   response.headers.set('Content-Security-Policy', 
     "default-src 'self'; " +
-    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.tiktok.com https://*.tiktok.com https://pagead2.googlesyndication.com; " +
+    "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.tiktok.com https://*.tiktok.com https://pagead2.googlesyndication.com https://rentsyst.com https://*.rentsyst.com; " +
     "style-src 'self' 'unsafe-inline'; " +
     "img-src 'self' data: https:; " +
     "font-src 'self' data:; " +
-    "connect-src 'self' https://maps.googleapis.com https://*.googleapis.com; " +
-    "frame-src 'self' https://www.tiktok.com https://*.tiktok.com https://www.google.com https://www.instagram.com/ https://*.instagram.com;"
+    "connect-src 'self' https://maps.googleapis.com https://*.googleapis.com https://rentsyst.com https://*.rentsyst.com; " +
+    "frame-src 'self' https://www.tiktok.com https://*.tiktok.com https://www.google.com https://www.instagram.com https://*.instagram.com https://rentsyst.com https://*.rentsyst.com;"
+
   )
 
   // Rate limit headers informativos

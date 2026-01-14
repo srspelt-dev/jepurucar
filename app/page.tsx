@@ -3,43 +3,107 @@
 import { Requirements } from './components/requirements'
 import Link from 'next/link'
 import Image from 'next/image'
-import { SmartVideoHero } from './components/smart-video-hero'
+import { useState, useEffect } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+
+const carouselImages = [
+  {
+    src: '/images/carrousel/HYUNDAI NEW HB20 HATCHBACK-1.png',
+    alt: 'Hyundai New HB20 Hatchback'
+  },
+  {
+    src: '/images/carrousel/KIA SOLUTO-1.png',
+    alt: 'Kia Soluto'
+  },
+  {
+    src: '/images/carrousel/RAIZE-1.png',
+    alt: 'Raize'
+  },
+  {
+    src: '/images/carrousel/volkswagen GOL-1.png',
+    alt: 'Volkswagen Gol'
+  }
+]
 
 export default function Home() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((current) => (current + 1) % carouselImages.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  const goToNext = () => {
+    setCurrentIndex((current) => (current + 1) % carouselImages.length)
+  }
+
+  const goToPrevious = () => {
+    setCurrentIndex((current) => (current - 1 + carouselImages.length) % carouselImages.length)
+  }
+
   return (
     <div>
       <div className="container mx-auto px-4 py-8 md:py-12">
-        <div className="grid md:grid-cols-5 gap-4 items-center">
-          {/* Video local - ocupa 2 columnas y se centra en móvil */}
-          <div className="md:col-span-2 relative mx-auto w-full max-w-sm md:max-w-none">
-            <div className="aspect-[9/16] h-[400px] md:h-[600px] w-full">
-              <SmartVideoHero />
+        {/* Carousel */}
+        <div className="relative w-full h-[520px] md:h-[620px] lg:h-[720px] overflow-hidden rounded-2xl shadow-2xl bg-gray-900">
+          {carouselImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute w-full h-full transition-transform duration-500 ease-in-out ${
+                index === currentIndex ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'
+              }`}
+              style={{ transform: `translateX(${(index - currentIndex) * 100}%)` }}
+            >
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                className="object-cover"
+                style={{ objectPosition: 'center 60%' }}
+                priority={index === 0}
+              />
+              {/* Botón de Reservar */}
+              <div className="absolute inset-0 flex items-end justify-center pb-6 md:pb-8">
+                <Link
+                  href="/reservas"
+                  className="bg-orange-500 text-white px-6 py-2 md:px-8 md:py-3 rounded-full text-base md:text-lg font-semibold hover:bg-orange-600 transition duration-300 shadow-lg transform hover:scale-105 z-10"
+                >
+                  Reservar Ahora
+                </Link>
+              </div>
             </div>
-          </div>
-
-          {/* Contenido de texto - ocupa 3 columnas */}
-          <div className="md:col-span-3 text-center md:text-left space-y-4 md:pl-4">
-            <h1 className="text-4xl md:text-5xl font-bold text-orange-500">
-              Bienvenidos a Jepuru Car
-            </h1>
-            <p className="text-xl text-gray-700">
-              Disfrutá de la libertad de viajar con nuestro servicio premium de alquiler de vehículos.
-              Ya sea para negocios o placer, tenemos el vehículo perfecto para ti.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-              <Link 
-                href="/vehicles" 
-                className="bg-orange-500 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-600 transition duration-300"
-              >
-                Ver Vehículos Disponibles
-              </Link>
-              <Link 
-                href="/contact" 
-                className="bg-white text-orange-500 border-2 border-orange-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-orange-50 transition duration-300"
-              >
-                Contactar Ahora
-              </Link>
-            </div>
+          ))}
+          
+          {/* Botones de navegación */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/75 transition duration-300 z-10"
+            aria-label="Slide anterior"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/75 transition duration-300 z-10"
+            aria-label="Slide siguiente"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </button>
+          
+          {/* Indicadores */}
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {carouselImages.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex ? 'bg-white w-8' : 'bg-white/50'
+                }`}
+                aria-label={`Ir al slide ${index + 1}`}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -61,7 +125,7 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/autos_jepuru/hb20Hatch.jpeg"
+                src="/images/autos_jepuru_nuevo/HYUNDAI NEW HB20 HATCHBACK-1.png"
                 alt="Autos"
                 width={400}
                 height={300}
@@ -88,7 +152,7 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/autos_jepuru/KGMtivoli.jpg"
+                src="/images/autos_jepuru_nuevo/KGM Tivoli.JPG"
                 alt="Camionetas"
                 width={400}
                 height={300}
@@ -107,7 +171,7 @@ export default function Home() {
             </Link>
 
             <Link 
-              href="/vehicles?type=VAN" 
+              href="/vehicles?type=SEDAN" 
               className="group relative overflow-hidden rounded-xl shadow-lg 
                         transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
@@ -115,8 +179,8 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/autos_jepuru/carnival.jpg"
-                alt="Van"
+                src="/images/autos_jepuru_nuevo/HB20 Sedan.JPG"
+                alt="Sedán"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
@@ -124,11 +188,11 @@ export default function Home() {
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
                              group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-lg">
-                  Van
+                  Sedán
                 </h3>
                 <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
                             transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
-                  Kia Carnival
+                  HB20S y Soluto
                 </p>
               </div>
             </Link>

@@ -40,6 +40,7 @@ export default function Contact() {
   return (
     <div className="container mx-auto px-4 py-12 space-y-24">
       {/* Hero Section */}
+      
       <section className="relative py-20 bg-gradient-to-r from-orange-500 to-orange-600 -mx-4 px-4">
         <div className="absolute inset-0 bg-[url('/images/pattern.png')] opacity-10"></div>
         <div className="relative container mx-auto text-center text-white">
@@ -50,7 +51,6 @@ export default function Contact() {
           </p>
         </div>
       </section>
-
       {/* Contenido Principal */}
       <section className="container mx-auto -mt-20">
         <div className="grid md:grid-cols-2 gap-12">

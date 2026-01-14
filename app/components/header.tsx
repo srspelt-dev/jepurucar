@@ -36,6 +36,7 @@ export function Header() {
             <li><Link href="/" className="hover:underline">Inicio</Link></li>
             <li><Link href="/services" className="hover:underline">Servicios</Link></li>
             <li><Link href="/vehicles" className="hover:underline">Vehículos</Link></li>
+            <li><Link href="/reservas" className="hover:underline">Reservas</Link></li>
             <li><Link href="/contact" className="hover:underline">Contáctanos</Link></li>
             <li><Link href="/about" className="hover:underline">Sobre Nosotros</Link></li>
           </ul>
@@ -47,6 +48,7 @@ export function Header() {
             <li><Link href="/" className="block hover:underline">Inicio</Link></li>
             <li><Link href="/services" className="block hover:underline">Servicios</Link></li>
             <li><Link href="/vehicles" className="block hover:underline">Vehículos</Link></li>
+            <li><Link href="/reservas" className="block hover:underline">Reservas</Link></li>
             <li><Link href="/contact" className="block hover:underline">Contáctanos</Link></li>
             <li><Link href="/about" className="block hover:underline">Sobre Nosotros</Link></li>
           </ul>
