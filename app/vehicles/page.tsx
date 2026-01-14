@@ -11,92 +11,97 @@ const phoneNumbers = [
   "+595971951077"  // Eliana
 ]
 
+const typeLabels: Record<string, string> = {
+  COMPACT: 'Compacto',
+  SEDAN: 'Sedán',
+  SUV: 'SUV',
+  VAN: 'Van'
+}
+
 const vehicles = [
   // Grupo Compacto
   { 
     id: 1, 
-    name: 'i10', 
+    name: 'Hyundai i10', 
     type: 'COMPACT', 
     features: [
       'Bajo consumo',
-      'Línea económica',
+      'Ideal para ciudad',
       'Manual y automática'
     ], 
-    image: '/images/autos_jepuru/i10.jpg'
+    image: '/images/autos_jepuru_nuevo/i10-1.png'
   },
   { 
     id: 2, 
-    name: 'Grand i10 hatchback', 
+    name: 'New Grand i10 hatchback', 
     type: 'COMPACT', 
     features: [
-      'Consumo equilibrado',
-      'Línea económica',
-      'Automática'
+      'Tecnología de vanguardia',
+      'Eficiente y compacto',
+      'Bluetooth, USB, Android Auto'
     ], 
-    image: '/images/autos_jepuru/grandi10Hatch.jpg'
+    image: '/images/autos_jepuru_nuevo/NEW GRAND i10-1.png'
   },
-  { 
-    id: 3, 
-    name: 'HB20 Hatchback', 
-    type: 'COMPACT', 
-    features: [
-      'Versátil',
-      'Manual',
-      'Línea intermedia',
-      'Bluetooth, USB, Apple CAR y Android Auto'
-    ], 
-    image: '/images/autos_jepuru/hb20Hatch.jpeg'
-  },
+  // { 
+  //   id: 3, 
+  //   name: 'HB20 Hatchback', 
+  //   type: 'COMPACT', 
+  //   features: [
+  //     'Versátil',
+  //     'Manual',
+  //     'Bluetooth y USB'
+  //   ], 
+  //   image: '/images/autos_jepuru_nuevo/New Hb20.JPG'
+  // },
   { 
     id: 4, 
     name: 'New HB20 Hatchback', 
     type: 'COMPACT', 
     features: [
-      'Compacto',
-      'Manual',
-      'Línea intermedia',
-      'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
+      'Compacto moderno',
+      'Pantalla con Apple Car y Android Auto',
+      'Bluetooth y USB'
     ], 
-    image: '/images/autos_jepuru/newHb20.jpeg'
+    image: '/images/autos_jepuru_nuevo/HYUNDAI NEW HB20 HATCHBACK-1.png'
   },
   { 
     id: 5, 
-    name: 'New Grand i10 hatchback', 
-    type: 'COMPACT', 
-    features: [
-      'Tecnología vanguardia',
-      'Potente y económico',
-      'WIFI, Bluetooth, USB, Apple CAR y Android Auto'
-    ], 
-    image: '/images/autos_jepuru/NewGrandi10.jpeg'
-  },
-  { 
-    id: 6, 
-    name: 'Etios hatchback', 
-    type: 'COMPACT', 
-    features: [
-      'Automática',
-      'Eficiente consumo',
-      'Bluetooth, USB, Apple CAR y Android Auto'
-    ], 
-    image: '/images/autos_jepuru/etios.jpeg'
-  },
-  { 
-    id: 7, 
     name: 'VW Gol hatchback', 
     type: 'COMPACT', 
     features: [
       'Automática',
       'Potente',
-      'Bluetooth, USB'
+      'Bluetooth y USB'
     ], 
-    image: '/images/autos_jepuru/gol.png'
+    image: '/images/autos_jepuru_nuevo/GOL VW.png'
+  },
+  { 
+    id: 6, 
+    name: 'Toyota Etios hatchback', 
+    type: 'COMPACT', 
+    features: [
+      'Automática',
+      'Eficiente en consumo',
+      'Bluetooth, USB, Apple Car y Android Auto'
+    ], 
+    image: '/images/autos_jepuru_nuevo/Toyota.JPG'
+  },
+  { 
+    id: 7, 
+    name: 'Suzuki Celerio', 
+    type: 'COMPACT', 
+    features: [
+      'Súper económico',
+      'Ideal para ciudad',
+      'Bluetooth y USB'
+    ], 
+    image: '/images/autos_jepuru_nuevo/Suzuki Celerio.JPG'
   },
 
   // Grupo Sedan
   { 
     id: 8, 
-    name: 'New Hyundai HB20S', 
+    name: 'Hyundai HB20S', 
     type: 'SEDAN', 
     features: [
       'Amplia baulera',
@@ -104,7 +109,7 @@ const vehicles = [
       'Automática',
       'Ideal para viajes largos'
     ], 
-    image: '/images/autos_jepuru/hb20s.jpeg'
+    image: '/images/autos_jepuru_nuevo/HB20 Sedan.JPG'
   },
   { 
     id: 9, 
@@ -115,7 +120,7 @@ const vehicles = [
       'Ideal para uso urbano',
       'Perfecto para viajes'
     ], 
-    image: '/images/autos_jepuru/soluto.jpeg'
+    image: '/images/autos_jepuru_nuevo/KIA SOLUTO-1.png'
   },
 
   // Grupo SUV
@@ -128,55 +133,52 @@ const vehicles = [
       '5 pasajeros',
       'Automático'
     ], 
-    image: '/images/autos_jepuru/hb20x.jpeg'
+    image: '/images/autos_jepuru_nuevo/HB20 X.png'
   },
   { 
     id: 11, 
-    name: 'GX3 PRO', 
+    name: 'KGM Tivoli', 
+    type: 'SUV', 
+    features: [
+      'Mini SUV',
+      'Interior amplio',
+      '5 pasajeros',
+      'Automático'
+    ], 
+    image: '/images/autos_jepuru_nuevo/KGM Tivoli.JPG'
+  },
+  { 
+    id: 12, 
+    name: 'Geely GX3', 
     type: 'SUV', 
     features: [
       'Mini SUV moderna',
       '5 pasajeros',
       'Automático'
     ], 
-    image: '/images/autos_jepuru/gx3pro.jpeg'
-  },
-  { 
-    id: 12, 
-    name: 'KGM Tivoli', 
-    type: 'SUV', 
-    features: [
-      'Mini SUV',
-      'Interior amplio',
-      'Baulera compacta',
-      '5 pasajeros',
-      'Automático'
-    ], 
-    image: '/images/autos_jepuru/KGMtivoli.jpg'
+    image: '/images/autos_jepuru_nuevo/Geely GX3.JPG'
   },
   { 
     id: 13, 
-    name: 'Geely Coolray', 
+    name: 'Toyota Raize', 
     type: 'SUV', 
     features: [
-      'SUV amplia',
-      'Turbo',
-      'Automática',
-      'Baulera amplia'
+      'SUV compacta',
+      'Motor eficiente',
+      'Conectividad completa'
     ], 
-    image: '/images/autos_jepuru/coolray.jpeg'
+    image: '/images/autos_jepuru_nuevo/RAIZE-1.png'
   },
   { 
     id: 14, 
-    name: 'ALL NEW TUCSON', 
+    name: 'Suzuki XL7', 
     type: 'SUV', 
     features: [
-      'SUV amplia',
-      'Turbo',
-      'Automática',
-      'Amplia baulera'
+      '3 filas de asientos',
+      'Espacio para 7 pasajeros',
+      'Automática'
     ], 
-    image: '/images/autos_jepuru/AllNewTucson.jpg'
+    image: '/images/autos_jepuru_nuevo/XL7-1.png'
   },
   { 
     id: 15, 
@@ -188,22 +190,23 @@ const vehicles = [
       'Turbo',
       'Automática'
     ], 
-    image: '/images/autos_jepuru/jim.jpeg'
+    image: '/images/autos_jepuru_nuevo/JIM 4X4-1.png'
   },
-
-  // Grupo VAN
   { 
     id: 16, 
-    name: 'Carnival', 
-    type: 'VAN', 
+    name: 'Hyundai Tucson', 
+    type: 'SUV', 
     features: [
-      'Hasta 10 pasajeros',
+      'SUV amplia',
+      'Turbo',
       'Automática',
-      'Turbo'
+      'Amplia baulera'
     ], 
-    image: '/images/autos_jepuru/carnival.jpg'
+    image: '/images/autos_jepuru_nuevo/Hyundai Tucson.JPG'
   }
 ]
+
+const vehicleTypes = Array.from(new Set(vehicles.map(vehicle => vehicle.type)))
 
 // Componente principal de vehículos
 function VehiclesContent() {
@@ -262,7 +265,7 @@ function VehiclesContent() {
           >
             Todos
           </button>
-          {['COMPACT', 'SEDAN', 'SUV', 'VAN'].map(type => (
+          {vehicleTypes.map(type => (
             <button
               key={type}
               onClick={() => setSelectedType(type)}
@@ -272,9 +275,7 @@ function VehiclesContent() {
                   : 'bg-gray-100 hover:bg-gray-200 text-gray-700'
               }`}
             >
-              {type === 'COMPACT' ? 'Compacto' :
-               type === 'SEDAN' ? 'Sedán' :
-               type === 'SUV' ? 'SUV' : 'Van'}
+              {typeLabels[type] ?? type}
             </button>
           ))}
         </div>
@@ -298,9 +299,7 @@ function VehiclesContent() {
               />
               <div className="absolute top-4 right-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm
                               transform transition-all duration-300 hover:-translate-y-1 shadow-md">
-                {vehicle.type === 'COMPACT' ? 'Compacto' :
-                 vehicle.type === 'SEDAN' ? 'Sedán' :
-                 vehicle.type === 'SUV' ? 'SUV' : 'Van'}
+                {typeLabels[vehicle.type] ?? vehicle.type}
               </div>
             </div>
             <div className="p-6">
