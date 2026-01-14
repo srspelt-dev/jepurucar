@@ -171,7 +171,7 @@ export default function Home() {
             </Link>
 
             <Link 
-              href="/vehicles?type=VAN" 
+              href="/vehicles?type=SEDAN" 
               className="group relative overflow-hidden rounded-xl shadow-lg 
                         transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
             >
@@ -179,8 +179,8 @@ export default function Home() {
                             group-hover:from-orange-500/85 group-hover:to-orange-600/85 
                             transition-all duration-500 ease-in-out z-10" />
               <Image
-                src="/images/autos_jepuru/carnival.jpg"
-                alt="Van"
+                src="/images/autos_jepuru_nuevo/HB20 Sedan.JPG"
+                alt="Sedán"
                 width={400}
                 height={300}
                 className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
@@ -188,11 +188,11 @@ export default function Home() {
               <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-6 z-20">
                 <h3 className="text-2xl font-bold mb-4 transform transition-all duration-300 
                              group-hover:scale-110 group-hover:-translate-y-2 drop-shadow-lg">
-                  Van
+                  Sedán
                 </h3>
                 <p className="text-center opacity-0 group-hover:opacity-100 transition-all duration-300 
                             transform translate-y-4 group-hover:translate-y-0 drop-shadow-lg">
-                  Kia Carnival
+                  HB20S y Soluto
                 </p>
               </div>
             </Link>
